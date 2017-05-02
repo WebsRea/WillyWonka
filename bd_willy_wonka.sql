@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-05-2017 a las 18:01:11
+-- Tiempo de generación: 02-05-2017 a las 19:33:49
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 5.6.28
 
@@ -32,22 +32,6 @@ CREATE TABLE `tbl_activitats` (
   `act_titol` varchar(100) NOT NULL,
   `act_text` text NOT NULL,
   `cla_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tbl_admin`
---
-
-CREATE TABLE `tbl_admin` (
-  `adm_id` int(11) NOT NULL,
-  `adm_nombre` varchar(50) NOT NULL,
-  `adm_apellidos` varchar(100) NOT NULL,
-  `adm_mail` varchar(100) NOT NULL,
-  `adm_pass` varchar(1000) NOT NULL,
-  `adm_estat` enum('actiu','inactiu','','') NOT NULL,
-  `mes_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -83,25 +67,9 @@ CREATE TABLE `tbl_esdeveniments` (
 
 CREATE TABLE `tbl_familia` (
   `fam_id` int(11) NOT NULL,
-  `tut_id_1` int(11) NOT NULL,
-  `tut_id_2` int(11) NOT NULL,
+  `usu_id1` int(11) NOT NULL,
+  `usu_id2` int(11) NOT NULL,
   `fam_estat` enum('actiu','inactiu','','') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tbl_mestre`
---
-
-CREATE TABLE `tbl_mestre` (
-  `mes_id` int(11) NOT NULL,
-  `mes_nombre` varchar(50) NOT NULL,
-  `mes_apellidos` varchar(100) NOT NULL,
-  `mes_mail` varchar(100) NOT NULL,
-  `mes_pass` varchar(1000) NOT NULL,
-  `mes_estat` enum('actiu','inactiu','','') NOT NULL,
-  `cla_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -170,34 +138,33 @@ CREATE TABLE `tbl_suro` (
   `sur_data` date NOT NULL,
   `sur_titol` varchar(100) NOT NULL,
   `sur_text` text NOT NULL,
-  `tut_id` int(11) NOT NULL
+  `usu_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_tipus_usuari`
+-- Estructura de tabla para la tabla `tbl_usuari`
 --
 
-CREATE TABLE `tbl_tipus_usuari` (
-  `tip_id` int(11) NOT NULL,
-  `tip_nombre` varchar(50) NOT NULL
+CREATE TABLE `tbl_usuari` (
+  `usu_id` int(11) NOT NULL,
+  `usu_nom` varchar(50) NOT NULL,
+  `usu_cognoms` varchar(100) NOT NULL,
+  `usu_mail` varchar(100) NOT NULL,
+  `usu_pass` varchar(1000) NOT NULL,
+  `usu_estat` enum('actiu','inactiu','','') NOT NULL,
+  `usu_tipus` enum('admin','mestre','tutor','') NOT NULL,
+  `mes_id` int(11) DEFAULT NULL,
+  `cla_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `tbl_tutor`
+-- Volcado de datos para la tabla `tbl_usuari`
 --
 
-CREATE TABLE `tbl_tutor` (
-  `tut_id` int(11) NOT NULL,
-  `tut_nom` varchar(50) NOT NULL,
-  `tut_cognom` varchar(100) NOT NULL,
-  `tut_mail` varchar(100) NOT NULL,
-  `tut_pass` varchar(1000) NOT NULL,
-  `tut_estat` enum('actiu','inactiu','','') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `tbl_usuari` (`usu_id`, `usu_nom`, `usu_cognoms`, `usu_mail`, `usu_pass`, `usu_estat`, `usu_tipus`, `mes_id`, `cla_id`) VALUES
+(1, 'Roger', 'Fusté Arroyo', 'rfuste18@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', 'actiu', 'admin', NULL, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -208,12 +175,6 @@ CREATE TABLE `tbl_tutor` (
 --
 ALTER TABLE `tbl_activitats`
   ADD PRIMARY KEY (`act_id`);
-
---
--- Indices de la tabla `tbl_admin`
---
-ALTER TABLE `tbl_admin`
-  ADD PRIMARY KEY (`adm_id`);
 
 --
 -- Indices de la tabla `tbl_classe`
@@ -232,12 +193,6 @@ ALTER TABLE `tbl_esdeveniments`
 --
 ALTER TABLE `tbl_familia`
   ADD PRIMARY KEY (`fam_id`);
-
---
--- Indices de la tabla `tbl_mestre`
---
-ALTER TABLE `tbl_mestre`
-  ADD PRIMARY KEY (`mes_id`);
 
 --
 -- Indices de la tabla `tbl_nen`
@@ -270,16 +225,10 @@ ALTER TABLE `tbl_suro`
   ADD PRIMARY KEY (`sur_id`);
 
 --
--- Indices de la tabla `tbl_tipus_usuari`
+-- Indices de la tabla `tbl_usuari`
 --
-ALTER TABLE `tbl_tipus_usuari`
-  ADD PRIMARY KEY (`tip_id`);
-
---
--- Indices de la tabla `tbl_tutor`
---
-ALTER TABLE `tbl_tutor`
-  ADD PRIMARY KEY (`tut_id`);
+ALTER TABLE `tbl_usuari`
+  ADD PRIMARY KEY (`usu_id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -290,11 +239,6 @@ ALTER TABLE `tbl_tutor`
 --
 ALTER TABLE `tbl_activitats`
   MODIFY `act_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `tbl_admin`
---
-ALTER TABLE `tbl_admin`
-  MODIFY `adm_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `tbl_classe`
 --
@@ -310,11 +254,6 @@ ALTER TABLE `tbl_esdeveniments`
 --
 ALTER TABLE `tbl_familia`
   MODIFY `fam_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `tbl_mestre`
---
-ALTER TABLE `tbl_mestre`
-  MODIFY `mes_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `tbl_nen`
 --
@@ -341,10 +280,10 @@ ALTER TABLE `tbl_stock_nen`
 ALTER TABLE `tbl_suro`
   MODIFY `sur_id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `tbl_tutor`
+-- AUTO_INCREMENT de la tabla `tbl_usuari`
 --
-ALTER TABLE `tbl_tutor`
-  MODIFY `tut_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `tbl_usuari`
+  MODIFY `usu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
