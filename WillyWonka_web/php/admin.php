@@ -10,8 +10,9 @@ $resultat=mysqli_query($conexio, $sql);
 			$_SESSION['usu_id'] = $usuari['usu_id'];
 			$_SESSION['usu_tipus'] = $usuari['usu_tipus'];
 			if ($_SESSION['usu_id'] == $usuari['usu_id'] AND $usuari['usu_tipus'] == 'admin') {
-				echo "Hola, " . $_SESSION['usu_nom'] . " ets un/a " . $_SESSION['usu_tipus'] . ".";
+				echo "Hola, " . $_SESSION['usu_nom'] . " ets un/a " . $_SESSION['usu_tipus'] . ".<br>";
 			}
+			echo "<a href='gestioPerfils.php'>Gestionar Perfils</a>";
 		}
 	} else {
 		header('location:../../index.php?err=1');
