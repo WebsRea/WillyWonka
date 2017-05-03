@@ -23,39 +23,55 @@
 				}
 
 
-				function seleccionarPersonaAccio(){
-				  // var ajax=objetoAjax();
-				  alert('entro');
+			function seleccionarPersonaAccio(){
+				  //alert('entro');
 				  var persona = 'undefined';
+				  var ajax=objetoAjax();
 				  var accio = 'undefined';
-				if (document.getElementById('nen').checked = true) {
- 					persona = document.getElementById('nen').value;
-				}else if(document.getElementById('tutor').checked = true){
-					persona = document.getElementById('tutor').value;
-				}else if(document.getElementById('mestre').checked = true){
-					persona = document.getElementById('mestre').value;
-				}
-				if (document.getElementById('editar').checked = true) {
- 					accio = document.getElementById('editar').value;
-				}else if(document.getElementById('afegir').checked = true){
-					accio = document.getElementById('afegir').value;
-				}else if(document.getElementById('eliminar').checked = true){
-					accio = document.getElementById('eliminar').value;
-				}
+				  var decisio = 'undefined';
+				if (document.getElementById('nen').checked == true) {
 
-				if (persona !== 'undefined' && accio !== 'undefined') {
-					alert(accio + persona);
+ 					if (document.getElementById('editar').checked == true) {
+ 						decisio = 'editaNen';
+					}else if(document.getElementById('afegir').checked == true){
+						decisio = 'afegirNen';
+					}else if(document.getElementById('eliminar').checked == true){
+						decisio = 'eliminaNen';
+					}
+				}else if(document.getElementById('tutor').checked == true){
+
+					if (document.getElementById('editar').checked == true) {
+						decisio = 'editaTutor';
+					}else if(document.getElementById('afegir').checked == true){
+						decisio = 'afegirTutor'; 						
+					}else if(document.getElementById('eliminar').checked == true){
+						decisio = 'eliminarTutor'; 		
+					}
+				}else if(document.getElementById('mestre').checked == true){
+
+					if (document.getElementById('editar').checked == true) {
+						decisio = 'editaTutor';	 					
+					}else if(document.getElementById('afegir').checked == true){
+						decisio = 'afegirTutor'; 		
+					}else if(document.getElementById('eliminar').checked == true){
+						decisio = 'eliminarTutor';
+					}
 				}
-				alert(accio);
-				 //  ajax.open("POST", 'filtro_eventos.php', true);
-				 //  ajax.onreadystatechange=function() {
-				 //  	if (ajax.readyState==4) {
-					// 	document.getElementById('total').innerHTML = ajax.responseText;
-					// }
+				// alert(decisio);
+				if (decisio !== 'undefined') {
+				  ajax.open("POST", 'ajax/ajaxGestioPerfil.php?decisio='+decisio, true);
+				  ajax.onreadystatechange=function() {
+				  	if (ajax.readyState==4) {
+						// alert('sduinco');
+						document.getElementById('ajaxPrincipal').innerHTML = ajax.responseText;
+					}
+				}
+				//alert(accio);
 				 //  }
-  			// 	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-  			// 	ajax.send("val="+val);
+  				ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+  				ajax.send(decisio);
 				}
+			}
 	</script>
 
 </head>
@@ -67,6 +83,8 @@ mestre<input type="radio" name="persona" id="mestre" value="mestre" onclick="sel
 editar<input type="radio" name="accio" id="editar" value="editar" onclick="seleccionarPersonaAccio()">
 afegir<input type="radio" name="accio" id="afegir" value="afegir" onclick="seleccionarPersonaAccio()">
 eliminar<input type="radio" name="accio" id="eliminar" value="eliminar" onclick="seleccionarPersonaAccio()">
+<br><br>
+<div id="ajaxPrincipal"></div>
 
 </body>
 </html>
