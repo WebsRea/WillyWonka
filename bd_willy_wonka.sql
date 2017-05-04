@@ -21,7 +21,9 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
+CREATE DATABASE bd_willy_wonka;
 
+USE bd_willy_wonka; 
 --
 -- Estructura de tabla para la tabla `tbl_activitats`
 --
@@ -56,7 +58,8 @@ CREATE TABLE `tbl_esdeveniments` (
   `esd_id` int(11) NOT NULL,
   `esd_data` date NOT NULL,
   `esd_titol` varchar(100) NOT NULL,
-  `esd_text` text NOT NULL
+  `esd_text` text NOT NULL,
+  `usu_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -155,7 +158,7 @@ CREATE TABLE `tbl_usuari` (
   `usu_pass` varchar(1000) NOT NULL,
   `usu_estat` enum('actiu','inactiu','','') NOT NULL,
   `usu_tipus` enum('admin','mestre','tutor','') NOT NULL,
-  `mes_id` int(11) DEFAULT NULL,
+  `usu_mestre` enum('si','no','') NOT NULL,
   `cla_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -163,8 +166,8 @@ CREATE TABLE `tbl_usuari` (
 -- Volcado de datos para la tabla `tbl_usuari`
 --
 
-INSERT INTO `tbl_usuari` (`usu_id`, `usu_nom`, `usu_cognoms`, `usu_mail`, `usu_pass`, `usu_estat`, `usu_tipus`, `mes_id`, `cla_id`) VALUES
-(1, 'Roger', 'Fusté Arroyo', 'rfuste18@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', 'actiu', 'admin', NULL, NULL);
+INSERT INTO `tbl_usuari` (`usu_id`, `usu_nom`, `usu_cognoms`, `usu_mail`, `usu_pass`, `usu_estat`, `usu_tipus`, `usu_mestre`, `cla_id`) VALUES
+(1, 'Roger', 'Fusté Arroyo', 'rfuste18@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', 'actiu', 'admin', 'no', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -284,6 +287,52 @@ ALTER TABLE `tbl_suro`
 --
 ALTER TABLE `tbl_usuari`
   MODIFY `usu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Filtros para la tabla `tbl_activitats`
+--
+ALTER TABLE `tbl_activitats`
+  ADD CONSTRAINT `FK_cla_id_1` FOREIGN KEY (`cla_id`) REFERENCES `tbl_classe` (`cla_id`);
+
+--
+-- Filtros para la tabla `tbl_familia`
+--
+ALTER TABLE `tbl_familia`
+  ADD CONSTRAINT `FK_usu_id1` FOREIGN KEY (`usu_id1`) REFERENCES `tbl_usuari` (`usu_id`),
+  ADD CONSTRAINT `FK_usu_id2` FOREIGN KEY (`usu_id2`) REFERENCES `tbl_usuari` (`usu_id`);
+
+--
+-- Filtros para la tabla `tbl_nen`
+--
+ALTER TABLE `tbl_nen`
+  ADD CONSTRAINT `FK_fam_id` FOREIGN KEY (`fam_id`) REFERENCES `tbl_familia` (`fam_id`),
+  ADD CONSTRAINT `FK_obs_id` FOREIGN KEY (`obs_id`) REFERENCES `tbl_observacions` (`obs_id`);
+
+--
+-- Filtros para la tabla `tbl_stock_nen`
+--
+ALTER TABLE `tbl_stock_nen`
+  ADD CONSTRAINT `FK_nen_id` FOREIGN KEY (`nen_id`) REFERENCES `tbl_nen` (`nen_id`),
+  ADD CONSTRAINT `FK_sto_id` FOREIGN KEY (`sto_id`) REFERENCES `tbl_stock` (`sto_id`);
+
+--
+-- Filtros para la tabla `tbl_suro`
+--
+ALTER TABLE `tbl_suro`
+  ADD CONSTRAINT `FK_usu_id` FOREIGN KEY (`usu_id`) REFERENCES `tbl_usuari` (`usu_id`);
+
+--
+-- Filtros para la tabla `tbl_usuari`
+--
+ALTER TABLE `tbl_usuari`
+  ADD CONSTRAINT `FK_cla_id` FOREIGN KEY (`cla_id`) REFERENCES `tbl_classe` (`cla_id`);
+
+--
+-- Filtros para la tabla `tbl_esdeveniments`
+--
+ALTER TABLE `tbl_esdeveniments`
+  ADD CONSTRAINT `FK_usu_id_esd` FOREIGN KEY (`usu_id`) REFERENCES `tbl_usuari` (`usu_id`);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
