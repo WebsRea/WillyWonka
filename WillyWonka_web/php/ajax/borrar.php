@@ -17,7 +17,7 @@
 					// echo "foisndfuignfdiuog";
 		if (mysqli_num_rows($resultats) != 0 ) {
 			while ($usuari = mysqli_fetch_array($resultats)) {
-				$nom = $usuari['usu_nom'] . " " . $usuari['cognoms'];
+				$nom = $usuari['usu_nom'] . ' ' . $usuari['cognoms'];
 				echo '<option value=' . $usuari['usu_id'] . '>$nom</option>';
 			}
 		}
@@ -34,7 +34,7 @@
 					// echo "foisndfuignfdiuog";
 		if (mysqli_num_rows($resultats) != 0 ) {
 			while ($usuari = mysqli_fetch_array($resultats)) {
-				$nom = $usuari['usu_nom'] . " " . $usuari['cognoms'];
+				$nom = $usuari['usu_nom'] . ' ' . $usuari['cognoms'];
 				echo '<option value=' . $usuari['usu_id'] . '>$nom</option>';
 			}
 		}
@@ -44,6 +44,7 @@
 	<input type='text' name='nen_cognoms' placeholder='Cognoms'>
 	<input type='text' name='nen_alergies' placeholder='Alergies'>
 	<input type='text' name='nen_trastorns' placeholder='Trastorns'>
+	<input type='submit' name='ENVIAR' value='ENVIAR'>
 </form>
 
 </body>

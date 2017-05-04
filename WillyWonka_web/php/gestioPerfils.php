@@ -50,11 +50,11 @@
 				}else if(document.getElementById('mestre').checked == true){
 
 					if (document.getElementById('editar').checked == true) {
-						decisio = 'editaTutor';	 					
+						decisio = 'editaMestre';	 					
 					}else if(document.getElementById('afegir').checked == true){
-						decisio = 'afegirTutor'; 		
+						decisio = 'afegirMestre'; 		
 					}else if(document.getElementById('eliminar').checked == true){
-						decisio = 'eliminarTutor';
+						decisio = 'eliminarMestre';
 					}
 				}
 				// alert(decisio);
