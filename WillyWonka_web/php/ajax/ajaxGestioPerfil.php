@@ -65,21 +65,27 @@ switch ($decisio) {
 			</form>
 		";
 		break;
-	case 'afegirNen':
+	case 'editarNen':
 		echo "
-			
+			Buscar:
+			<input type='text' id='buscador' onkeyup='buscador()'>
+			<div id='resultadosBusqueda'></div>
 		";
 		break;
 
-	case 'afegirNen':
+	case 'editarTutor':
 		echo "
-			
+			Buscar:
+			<input type='text' id='buscador' onkeyup='buscador()'>
+			<div id='resultadosBusqueda'></div>	
 		";
 		break;
 
-	case 'afegirNen':
+	case 'editarMestre':
 		echo "
-			
+			Buscar:
+			<input type='text' id='buscador' onkeyup='buscador()'>
+			<div id='resultadosBusqueda'></div>
 		";
 		break;
 

@@ -22,6 +22,22 @@
 					return xmlhttp;
 				}
 
+			function buscador(){
+				var ajax=objetoAjax();
+				var busqueda = document.getElementById('buscador').value;
+				// alert(busqueda);
+				ajax.open("POST", 'ajax/ajaxBusqueda.php?busqueda='+busqueda, true);
+				ajax.onreadystatechange=function() {
+				if (ajax.readyState==4) {
+					// alert('sduinco');
+				document.getElementById('resultadosBusqueda').innerHTML = ajax.responseText;
+				}
+				ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+  				// ajax.send(decisio);
+
+				}
+			}
+
 
 			function seleccionarPersonaAccio(){
 				  //alert('entro');
@@ -32,7 +48,7 @@
 				if (document.getElementById('nen').checked == true) {
 
  					if (document.getElementById('editar').checked == true) {
- 						decisio = 'editaNen';
+ 						decisio = 'editarNen';
 					}else if(document.getElementById('afegir').checked == true){
 						decisio = 'afegirNen';
 					}else if(document.getElementById('eliminar').checked == true){
@@ -41,7 +57,7 @@
 				}else if(document.getElementById('tutor').checked == true){
 
 					if (document.getElementById('editar').checked == true) {
-						decisio = 'editaTutor';
+						decisio = 'editarTutor';
 					}else if(document.getElementById('afegir').checked == true){
 						decisio = 'afegirTutor'; 						
 					}else if(document.getElementById('eliminar').checked == true){
@@ -50,7 +66,7 @@
 				}else if(document.getElementById('mestre').checked == true){
 
 					if (document.getElementById('editar').checked == true) {
-						decisio = 'editaMestre';	 					
+						decisio = 'editarMestre';	 					
 					}else if(document.getElementById('afegir').checked == true){
 						decisio = 'afegirMestre'; 		
 					}else if(document.getElementById('eliminar').checked == true){
@@ -61,8 +77,8 @@
 				if (decisio !== 'undefined') {
 				  ajax.open("POST", 'ajax/ajaxGestioPerfil.php?decisio='+decisio, true);
 				  ajax.onreadystatechange=function() {
-				  	if (ajax.readyState==4) {
 						// alert('sduinco');
+				  	if (ajax.readyState==4) {
 						document.getElementById('ajaxPrincipal').innerHTML = ajax.responseText;
 					}
 				}
