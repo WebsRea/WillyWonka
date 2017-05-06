@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>gestio Perfils</title>
+	<!-- <script src=”jquery/jquery-3.2.1.min.js” type=”text/javascript”></script> -->
+	<script src="http://code.jquery.com/jquery.js"></script>
 	<script type="text/javascript">
 		function objetoAjax(){
 					var xmlhttp=false;
@@ -22,22 +24,126 @@
 					return xmlhttp;
 				}
 
-			function buscador(){
-				var ajax=objetoAjax();
-				var busqueda = document.getElementById('buscador').value;
-				// alert(busqueda);
-				ajax.open("POST", 'ajax/ajaxBusqueda.php?busqueda='+busqueda, true);
-				ajax.onreadystatechange=function() {
-				if (ajax.readyState==4) {
-					// alert('sduinco');
-				document.getElementById('resultadosBusqueda').innerHTML = ajax.responseText;
-				}
-				ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-  				// ajax.send(decisio);
+			
 
-				}
-			}
+				function buscador1(){
+              var busqueda = document.getElementById('buscador').value;
+              var decisioBusqueda = document.getElementById('decisio').value;
+              // alert(decisioBusqueda);
+              var url = "ajax/ajaxBusqueda.php?busqueda="+busqueda+"&decisioBusqueda="+decisioBusqueda; // El script a dónde se realizará la petición.
+                $.ajax({
+                       type: "POST",
+                       url: url,
+                       data: busqueda, // Adjuntar los campos del formulario enviado.
+                       success: function(data)
+                       {
+                          // alert("Usuario añadido correctamente");
+                          // $("#lista li").remove();
 
+                          //return llamadaBbdd();
+
+                           $("#resultadosBusqueda").html(data); // Mostrar la respuestas del script PHP.
+                       }
+                     });
+
+                return false; // Evitar ejecutar el submit del formulario.
+            };
+
+            
+
+            function buscadorEliminarNen(){
+              var busqueda = document.getElementById('buscador').value;
+              var decisioBusqueda = document.getElementById('decisio').value;
+              // alert(decisioBusqueda);
+              var url = "ajax/ajaxBusquedaEliminarNen.php?busqueda="+busqueda+"&decisioBusqueda="+decisioBusqueda; // El script a dónde se realizará la petición.
+                $.ajax({
+                       type: "POST",
+                       url: url,
+                       data: busqueda, // Adjuntar los campos del formulario enviado.
+                       success: function(data)
+                       {
+                          // alert("Usuario añadido correctamente");
+                          // $("#lista li").remove();
+
+                          //return llamadaBbdd();
+
+                           $("#resultadosBusqueda").html(data); // Mostrar la respuestas del script PHP.
+                       }
+                     });
+
+                return false; // Evitar ejecutar el submit del formulario.
+            };
+
+            
+            function editarNen(id){
+				  var ajax=objetoAjax();
+				 
+				  ajax.open("POST", 'ajax/ajaxEditarNen.php?id='+id, true);
+				  ajax.onreadystatechange=function() {
+				  	if (ajax.readyState==4) {
+						document.getElementById('editarPerfil').innerHTML = ajax.responseText;
+					}
+				  }
+  				ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+  				ajax.send("id="+id);
+				}
+
+
+				function editarTutor(id){
+				  var ajax=objetoAjax();
+				 
+				  ajax.open("POST", 'ajax/ajaxEditarTutor.php?id='+id, true);
+				  ajax.onreadystatechange=function() {
+				  	if (ajax.readyState==4) {
+				  		// alert('fdsf');
+						document.getElementById('editarPerfil').innerHTML = ajax.responseText;
+					}
+				  }
+  				ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+  				ajax.send("id="+id);
+				}
+
+				function editarMestre(id){
+				  var ajax=objetoAjax();
+				 
+				  ajax.open("POST", 'ajax/ajaxEditarMestre.php?id='+id, true);
+				  ajax.onreadystatechange=function() {
+				  	if (ajax.readyState==4) {
+				  		// alert('fdsf');
+						document.getElementById('editarPerfil').innerHTML = ajax.responseText;
+					}
+				  }
+  				ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+  				ajax.send("id="+id);
+				}
+
+				function eliminarNen(id){
+				  var ajax=objetoAjax();
+				 
+				  ajax.open("POST", 'ajax/ajaxEliminarNen.php?id='+id, true);
+				  		// alert('sadsa');
+				  ajax.onreadystatechange=function() {
+				  	if (ajax.readyState==4) {
+						document.getElementById('eliminarPerfil').innerHTML = ajax.responseText;
+					}
+				  }
+  				ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+  				ajax.send("id="+id);
+				}
+
+				function eliminarUsu(id){
+				  var ajax=objetoAjax();
+				 
+				  ajax.open("POST", 'ajax/ajaxEliminarUsu.php?id='+id, true);
+				  ajax.onreadystatechange=function() {
+				  	if (ajax.readyState==4) {
+				  		// alert('fdsf');
+						document.getElementById('eliminarPerfil').innerHTML = ajax.responseText;
+					}
+				  }
+  				ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+  				ajax.send("id="+id);
+				}
 
 			function seleccionarPersonaAccio(){
 				  //alert('entro');
@@ -61,7 +167,7 @@
 					}else if(document.getElementById('afegir').checked == true){
 						decisio = 'afegirTutor'; 						
 					}else if(document.getElementById('eliminar').checked == true){
-						decisio = 'eliminarTutor'; 		
+						decisio = 'eliminaTutor'; 		
 					}
 				}else if(document.getElementById('mestre').checked == true){
 
@@ -70,7 +176,7 @@
 					}else if(document.getElementById('afegir').checked == true){
 						decisio = 'afegirMestre'; 		
 					}else if(document.getElementById('eliminar').checked == true){
-						decisio = 'eliminarMestre';
+						decisio = 'eliminaMestre';
 					}
 				}
 				// alert(decisio);
@@ -80,6 +186,7 @@
 						// alert('sduinco');
 				  	if (ajax.readyState==4) {
 						document.getElementById('ajaxPrincipal').innerHTML = ajax.responseText;
+						buscador1();
 					}
 				}
 				//alert(accio);
@@ -100,7 +207,8 @@ editar<input type="radio" name="accio" id="editar" value="editar" onclick="selec
 afegir<input type="radio" name="accio" id="afegir" value="afegir" onclick="seleccionarPersonaAccio()">
 eliminar<input type="radio" name="accio" id="eliminar" value="eliminar" onclick="seleccionarPersonaAccio()">
 <br><br>
-<div id="ajaxPrincipal"></div>
+<div id="ajaxPrincipal"></div><br>
+
 
 </body>
 </html>

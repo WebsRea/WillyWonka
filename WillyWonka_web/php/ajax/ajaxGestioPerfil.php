@@ -56,7 +56,7 @@ switch ($decisio) {
 
 	case 'afegirMestre':
 		echo "
-			<form action='procs/afegirTutor.proc.php'>
+			<form action='procs/afegirMestre.proc.php'>
 				<input type='text' name='usu_nom' placeholder='Nom'><br>
 				<input type='text' name='usu_cognoms' placeholder='Cognoms'><br>
 				<input type='text' name='usu_mail' placeholder='Correu'><br>
@@ -68,42 +68,60 @@ switch ($decisio) {
 	case 'editarNen':
 		echo "
 			Buscar:
-			<input type='text' id='buscador' onkeyup='buscador()'>
+			<input type='text' id='buscador' onkeyup='buscador1()'>
+			<input type='hidden' id='decisio' value='$decisio'>
 			<div id='resultadosBusqueda'></div>
+			<div id='editarPerfil'></div>
 		";
 		break;
 
 	case 'editarTutor':
 		echo "
 			Buscar:
-			<input type='text' id='buscador' onkeyup='buscador()'>
+			<input type='text' id='buscador' onkeyup='buscador1()'>
+			<input type='hidden' id='decisio' value='$decisio'>
 			<div id='resultadosBusqueda'></div>	
+			<div id='editarPerfil'></div>
 		";
 		break;
 
 	case 'editarMestre':
 		echo "
 			Buscar:
-			<input type='text' id='buscador' onkeyup='buscador()'>
+			<input type='text' id='buscador' onkeyup='buscador1()'>
+			<input type='hidden' id='decisio' value='$decisio'>
 			<div id='resultadosBusqueda'></div>
+			<div id='editarPerfil'></div>
 		";
 		break;
 
-	case 'afegirNen':
+	case 'eliminaNen':
 		echo "
-			
+			Buscar:
+			<input type='text' id='buscador' onkeyup='buscador1()'>
+			<input type='hidden' id='decisio' value='$decisio'>
+			<div id='resultadosBusqueda'></div>
+			<div id='eliminarPerfil'></div>
 		";
 		break;
 
-	case 'afegirNen':
+	case 'eliminaTutor':
 		echo "
-			
+			Buscar:
+			<input type='text' id='buscador' onkeyup='buscador1()'>
+			<input type='hidden' id='decisio' value='$decisio'>
+			<div id='resultadosBusqueda'></div>
+			<div id='eliminarPerfil'></div>
 		";
 		break;
 
-	case 'afegirNen':
+	case 'eliminaMestre':
 		echo "
-			
+			Buscar:
+			<input type='text' id='buscador' onkeyup='buscador1()'>
+			<input type='hidden' id='decisio' value='$decisio'>
+			<div id='resultadosBusqueda'></div>
+			<div id='eliminarPerfil'></div>
 		";
 		break;
 	
