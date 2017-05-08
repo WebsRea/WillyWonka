@@ -199,13 +199,18 @@
 
 </head>
 <body>
-nen<input type="radio" name="persona" id="nen" value="nen" onclick="seleccionarPersonaAccio()">
-tutor<input type="radio" name="persona" id="tutor" value="tutor" onclick="seleccionarPersonaAccio()">
-mestre<input type="radio" name="persona" id="mestre" value="mestre" onclick="seleccionarPersonaAccio()">
-<br><br>
-editar<input type="radio" name="accio" id="editar" value="editar" onclick="seleccionarPersonaAccio()">
-afegir<input type="radio" name="accio" id="afegir" value="afegir" onclick="seleccionarPersonaAccio()">
-eliminar<input type="radio" name="accio" id="eliminar" value="eliminar" onclick="seleccionarPersonaAccio()">
+<div>
+	nen<input type="radio" name="persona" id="nen" value="nen" onclick="seleccionarPersonaAccio()">
+	tutor<input type="radio" name="persona" id="tutor" value="tutor" onclick="seleccionarPersonaAccio()">
+	mestre<input type="radio" name="persona" id="mestre" value="mestre" onclick="seleccionarPersonaAccio()">
+	<br><br>
+	editar<input type="radio" name="accio" id="editar" value="editar" onclick="seleccionarPersonaAccio()">
+	afegir<input type="radio" name="accio" id="afegir" value="afegir" onclick="seleccionarPersonaAccio()">
+	eliminar<input type="radio" name="accio" id="eliminar" value="eliminar" onclick="seleccionarPersonaAccio()">
+</div> 
+<div>
+	<a href="gestioClasses.php">Gestionar classes</a>
+</div>
 <br><br>
 <div id="ajaxPrincipal"></div><br>
 
