@@ -158,7 +158,7 @@ CREATE TABLE `tbl_usuari` (
   `usu_pass` varchar(1000) NOT NULL,
   `usu_estat` enum('actiu','inactiu','','') NOT NULL,
   `usu_tipus` enum('admin','mestre','tutor','') NOT NULL,
-  `usu_mestre` enum('si','no','') NOT NULL,
+  `mes_id` int (11) NULL,
   `cla_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -166,8 +166,8 @@ CREATE TABLE `tbl_usuari` (
 -- Volcado de datos para la tabla `tbl_usuari`
 --
 
-INSERT INTO `tbl_usuari` (`usu_id`, `usu_nom`, `usu_cognoms`, `usu_mail`, `usu_pass`, `usu_estat`, `usu_tipus`, `usu_mestre`, `cla_id`) VALUES
-(1, 'Roger', 'Fusté Arroyo', 'rfuste18@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', 'actiu', 'admin', 'no', NULL);
+INSERT INTO `tbl_usuari` (`usu_id`, `usu_nom`, `usu_cognoms`, `usu_mail`, `usu_pass`, `usu_estat`, `usu_tipus`, `mes_id`, `cla_id`) VALUES
+(1, 'Roger', 'Fusté Arroyo', 'rfuste18@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', '1', 'admin', 'no', NULL);
 
 --
 -- Índices para tablas volcadas
