@@ -40,6 +40,16 @@ $usu_nom = $_SESSION['usu_nom'];
 						}	
 					}
 				}
+				$sqlAdmin="SELECT * FROM tbl_usuari where usu_tipus = 'admin'";
+								$resultsAdmin=mysqli_query($conexio,$sqlAdmin);
+								if (mysqli_num_rows($resultsAdmin) != 0){
+									while ($usuAdmin = mysqli_fetch_array($resultsAdmin)) {
+										$nomAdmin = $usuAdmin['usu_nom']." ".$usuAdmin['usu_cognoms'];
+										$mailAdmin = $usuAdmin['usu_mail'];
+										echo "<option value=$mailAdmin>$nomAdmin</option>";
+											
+									}
+								}
         	 ?>
 </select>
         <label for="email">Asunto</label>   
