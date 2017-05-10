@@ -11,7 +11,7 @@ $usu_nom = $_SESSION['usu_nom'];
 <body>
 	<form name="sentMessage" id="contactForm" action="procs/enviarCorreo.proc.php" novalidate>
         <label for="email">Receptor</label>
-        	<select id="selectProfe" name="selectProfe">
+        	<select id="selectProfe"  name="mail_correu">
         	<?php 
 				include '../conexio.php';
 				$usu_id = $_SESSION['usu_id'];
