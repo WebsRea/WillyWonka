@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="http://code.jquery.com/jquery.js"></script>
 <script type="text/javascript">
 	function objetoAjax(){
 					var xmlhttp=false;
@@ -20,7 +21,27 @@
 					}
 					return xmlhttp;
 				}
+		
+		function obrirBuscador(){
+              // alert(decisioBusqueda);
+              var url = "ajax/ajaxObrirBuscador.php"; // El script a dónde se realizará la petición.
+                $.ajax({
+                       type: "POST",
+                       url: url,
+                       success: function(data)
+                       {
+                          // alert("Usuario añadido correctamente");
+                          // $("#lista li").remove();
 
+                          //return llamadaBbdd();
+
+                           $("#obrirBuscador").html(data); // Mostrar la respuestas del script PHP.
+                           buscadorFichaNen();
+                       }
+                     });
+
+                return false; // Evitar ejecutar el submit del formulario.
+            };
         function buscadorFichaNen(){
 				  var ajax=objetoAjax();
 				  var busqueda = document.getElementById('buscador').value;
@@ -35,12 +56,31 @@
   				ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
   				ajax.send("busqueda="+busqueda);
 		}
+
+		function buscadorFichaNenClasse(){
+				  var ajax=objetoAjax();
+				  var busqueda = document.getElementById('buscadorClasse').value;
+				  ajax.open("POST", "ajax/ajaxBuscadorFichaNenClasse.php?busqueda="+busqueda, true);
+				  // alert(busqueda);
+				  ajax.onreadystatechange=function() {
+				  	if (ajax.readyState==4) {
+				  		// alert('fdsf');
+						document.getElementById('resultadosBusquedaClasse').innerHTML = ajax.responseText;
+					}
+				  }
+  				ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+  				ajax.send("busqueda="+busqueda);
+		}
 </script>
 	<title></title>
 </head>
-<body onload="buscadorFichaNen()">
+<body onload="buscadorFichaNenClasse()">
 Buscar:<br>
-<input type="text" id="buscador" onkeyup="buscadorFichaNen()"><br>
+<input type="text" id="buscadorClasse" onkeyup="buscadorFichaNenClasse()"><br>
+<div id="resultadosBusquedaClasse"></div>
+
+<a href="#" onclick="obrirBuscador()">Veure tots els nens</a>
+<div id="obrirBuscador"></div>
 <div id="resultadosBusqueda"></div>
 
 </body>

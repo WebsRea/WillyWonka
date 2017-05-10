@@ -6,7 +6,7 @@ switch ($decisio) {
 		echo "
 			<form action='procs/afegirNen.proc.php'>
 				<h3>Afegir un nou infant</h3>
-				tutor1:
+				familiar1:
 				<select name='usu_id1'>
 			";
 
@@ -20,7 +20,7 @@ switch ($decisio) {
 					}
 				 echo "
 				</select><br>
-				tutor2:
+				familiar2:
 				<select name='usu_id2'>";
 					$resultats=mysqli_query($conexio, $sql);
 					if (mysqli_num_rows($resultats) != 0 ) {
