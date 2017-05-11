@@ -22,57 +22,61 @@
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script type="text/javascript">
 
-
-		function objetoAjax(){
-			var xmlhttp=false;
-			try {
-				xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-			} catch (e) {
-				try {
-					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-				} catch (E) {
-					xmlhttp = false;
-				}
-			}
-
-			if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
-				xmlhttp = new XMLHttpRequest();
-			}
-			return xmlhttp;
-		}
-
 		function canviarMail(){
-			var ajax=objetoAjax();
-			ajax.open("POST", 'ajax/ajaxCanviarMail.php?id=', true);
-			ajax.onreadystatechange=function() {
-			alert('dfins');
-				if (ajax.readyState==4) {
-					document.getElementById('textCanviar').innerHTML = ajax.responseText;
-				}
-			}
-			ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-		}
+              // alert("fdisom");
+              var url = "ajax/ajaxCanviarMail.php"; // El script a dónde se realizará la petición.
+                $.ajax({
+                       type: "POST",
+                       url: url, // Adjuntar los campos del formulario enviado.
+                       success: function(data)
+                       {
+                          // alert("Usuario añadido correctamente");
+                          // $("#lista li").remove();
 
-		function noCanviarMail(){
-			var ajax=objetoAjax();
+                          //return llamadaBbdd();
 
-			ajax.open("POST", 'ajax/ajaxNoCanviarMail.php?id=', true);
-			ajax.onreadystatechange=function() {
-				if (ajax.readyState==4) {
-					document.getElementById('textCanviar').innerHTML = ajax.responseText;
-				}
-			}
-			ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-		}
+                           $("#meter").html(data); // Mostrar la respuestas del script PHP.
+                       }
+                     });
+
+                return false; // Evitar ejecutar el submit del formulario.
+            };
+
+            function noCanviarMail(){
+              // alert("fdisom");
+              var url = "ajax/ajaxNoCanviarMail.php"; // El script a dónde se realizará la petición.
+                $.ajax({
+                       type: "POST",
+                       url: url, // Adjuntar los campos del formulario enviado.
+                       success: function(data)
+                       {
+                          // alert("Usuario añadido correctamente");
+                          // $("#lista li").remove();
+
+                          //return llamadaBbdd();
+
+                           $("#meter").html(data); // Mostrar la respuestas del script PHP.
+                       }
+                     });
+
+                return false; // Evitar ejecutar el submit del formulario.
+            };
 
 		
+			
 	</script>
 </head>
 <body>
 <form action="procs/editarPerfilPropi.proc.php">
+	
+	<div id="meter">
+		Correu: <input type="email" name="usu_mail" disabled><br><a href="#" onclick="canviarMail()">Vull canviar el email</a>
+	</div>
+
+
+	<!-- Correu: <div id="divMail"><input type="email" id="correuCheckbox" name="usu_mail"></div>
 	<div id="textCanviar">
-	Correu: <input type="email" name="usu_mail" disabled="true"><br>
-	<a href="#" onclick="canviarMail()">Vull canviar el email</a></div>
+		<a href="#" id="textolalalala"><text id="frase">Vull canviar el email</text></a></div> -->
 </form>
 </body>
 </html>
