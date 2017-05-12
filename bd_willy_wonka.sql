@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-05-2017 a las 19:33:49
--- Versión del servidor: 10.1.19-MariaDB
--- Versión de PHP: 5.6.28
+-- Tiempo de generación: 12-05-2017 a las 16:13:13
+-- Versión del servidor: 10.1.10-MariaDB
+-- Versión de PHP: 7.0.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -171,30 +171,27 @@ CREATE TABLE `tbl_usuari` (
   `usu_pass` varchar(1000) NOT NULL,
   `usu_estat` enum('actiu','inactiu','','') NOT NULL,
   `usu_tipus` enum('admin','mestre','tutor','') NOT NULL,
-  `mes_id` int (11) NULL,
+  `mes_id` int(11) DEFAULT NULL,
   `cla_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
---
--- Estructura de tabla para la tabla `tbl_frase`
---
-
--- --------------------------------------------------------
 --
 -- Volcado de datos para la tabla `tbl_usuari`
 --
 
 INSERT INTO `tbl_usuari` (`usu_id`, `usu_nom`, `usu_cognoms`, `usu_mail`, `usu_pass`, `usu_estat`, `usu_tipus`, `mes_id`, `cla_id`) VALUES
-(1, 'Roger', 'Fusté Arroyo', 'rfuste18@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', 'actiu', 'admin', NULL, NULL),
+(1, 'Roger', 'Fusté Arroyo', 'rfuste18@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', 'actiu', 'admin', 0, NULL);
 
+--
+-- Índices para tablas volcadas
 --
 
 --
 -- Indices de la tabla `tbl_activitats`
 --
 ALTER TABLE `tbl_activitats`
-  ADD PRIMARY KEY (`act_id`);
+  ADD PRIMARY KEY (`act_id`),
+  ADD KEY `FK_cla_id_1` (`cla_id`);
 
 --
 -- Indices de la tabla `tbl_classe`
@@ -206,13 +203,16 @@ ALTER TABLE `tbl_classe`
 -- Indices de la tabla `tbl_esdeveniments`
 --
 ALTER TABLE `tbl_esdeveniments`
-  ADD PRIMARY KEY (`esd_id`);
+  ADD PRIMARY KEY (`esd_id`),
+  ADD KEY `FK_usu_id_esd` (`usu_id`);
 
 --
 -- Indices de la tabla `tbl_familia`
 --
 ALTER TABLE `tbl_familia`
-  ADD PRIMARY KEY (`fam_id`);
+  ADD PRIMARY KEY (`fam_id`),
+  ADD KEY `FK_usu_id1` (`usu_id1`),
+  ADD KEY `FK_usu_id2` (`usu_id2`);
 
 --
 -- Indices de la tabla `tbl_frase`
@@ -225,7 +225,9 @@ ALTER TABLE `tbl_frase`
 -- Indices de la tabla `tbl_nen`
 --
 ALTER TABLE `tbl_nen`
-  ADD PRIMARY KEY (`nen_id`);
+  ADD PRIMARY KEY (`nen_id`),
+  ADD KEY `FK_fam_id` (`fam_id`),
+  ADD KEY `FK_obs_id` (`obs_id`);
 
 --
 -- Indices de la tabla `tbl_observacions`
@@ -243,19 +245,23 @@ ALTER TABLE `tbl_stock`
 -- Indices de la tabla `tbl_stock_nen`
 --
 ALTER TABLE `tbl_stock_nen`
-  ADD PRIMARY KEY (`stonen_id`);
+  ADD PRIMARY KEY (`stonen_id`),
+  ADD KEY `FK_nen_id` (`nen_id`),
+  ADD KEY `FK_sto_id` (`sto_id`);
 
 --
 -- Indices de la tabla `tbl_suro`
 --
 ALTER TABLE `tbl_suro`
-  ADD PRIMARY KEY (`sur_id`);
+  ADD PRIMARY KEY (`sur_id`),
+  ADD KEY `FK_usu_id` (`usu_id`);
 
 --
 -- Indices de la tabla `tbl_usuari`
 --
 ALTER TABLE `tbl_usuari`
-  ADD PRIMARY KEY (`usu_id`);
+  ADD PRIMARY KEY (`usu_id`),
+  ADD KEY `FK_cla_id` (`cla_id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -281,6 +287,11 @@ ALTER TABLE `tbl_esdeveniments`
 --
 ALTER TABLE `tbl_familia`
   MODIFY `fam_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `tbl_frase`
+--
+ALTER TABLE `tbl_frase`
+  MODIFY `frase_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `tbl_nen`
 --
@@ -311,6 +322,9 @@ ALTER TABLE `tbl_suro`
 --
 ALTER TABLE `tbl_usuari`
   MODIFY `usu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- Restricciones para tablas volcadas
+--
 
 --
 -- Filtros para la tabla `tbl_activitats`
@@ -319,11 +333,23 @@ ALTER TABLE `tbl_activitats`
   ADD CONSTRAINT `FK_cla_id_1` FOREIGN KEY (`cla_id`) REFERENCES `tbl_classe` (`cla_id`);
 
 --
+-- Filtros para la tabla `tbl_esdeveniments`
+--
+ALTER TABLE `tbl_esdeveniments`
+  ADD CONSTRAINT `FK_usu_id_esd` FOREIGN KEY (`usu_id`) REFERENCES `tbl_usuari` (`usu_id`);
+
+--
 -- Filtros para la tabla `tbl_familia`
 --
 ALTER TABLE `tbl_familia`
   ADD CONSTRAINT `FK_usu_id1` FOREIGN KEY (`usu_id1`) REFERENCES `tbl_usuari` (`usu_id`),
   ADD CONSTRAINT `FK_usu_id2` FOREIGN KEY (`usu_id2`) REFERENCES `tbl_usuari` (`usu_id`);
+
+--
+-- Filtros para la tabla `tbl_frase`
+--
+ALTER TABLE `tbl_frase`
+  ADD CONSTRAINT `FK_usu_id_frase` FOREIGN KEY (`usu_id`) REFERENCES `tbl_usuari` (`usu_id`);
 
 --
 -- Filtros para la tabla `tbl_nen`
@@ -350,18 +376,6 @@ ALTER TABLE `tbl_suro`
 --
 ALTER TABLE `tbl_usuari`
   ADD CONSTRAINT `FK_cla_id` FOREIGN KEY (`cla_id`) REFERENCES `tbl_classe` (`cla_id`);
-
---
--- Filtros para la tabla `tbl_esdeveniments`
---
-ALTER TABLE `tbl_esdeveniments`
-  ADD CONSTRAINT `FK_usu_id_esd` FOREIGN KEY (`usu_id`) REFERENCES `tbl_usuari` (`usu_id`);
---
--- Filtros para la tabla `tbl_frase`
---
-ALTER TABLE `tbl_frase`
-  ADD CONSTRAINT `FK_usu_id_frase` FOREIGN KEY (`usu_id`) REFERENCES `tbl_usuari` (`usu_id`);
-
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
