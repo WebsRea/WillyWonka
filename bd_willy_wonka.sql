@@ -265,6 +265,7 @@ ALTER TABLE `tbl_familia`
 -- Indices de la tabla `tbl_frase`
 --
 ALTER TABLE `tbl_frase`
+  ADD PRIMARY KEY (`frase_id`),
   ADD KEY `FK_usu_idfrase` (`usu_id`);
 
 --
