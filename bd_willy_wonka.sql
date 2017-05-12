@@ -49,7 +49,18 @@ CREATE TABLE `tbl_classe` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
+--
+-- Estructura de tabla para la tabla `tbl_familia`
+--
 
+CREATE TABLE `tbl_document` (
+  `doc_id` int(11) NOT NULL,
+  `doc_tipus` enum('circular','menu','documentacio_inicial') NOT NULL,
+  `doc_nom` varchar(500) NOT NULL,
+  `doc_ruta` varchar(500) NOT NULL,
+  `usu_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- --------------------------------------------------------
 --
 -- Estructura de tabla para la tabla `tbl_esdeveniments`
 --
@@ -198,6 +209,12 @@ ALTER TABLE `tbl_classe`
   ADD PRIMARY KEY (`cla_id`);
 
 --
+-- Indices de la tabla `tbl_document`
+--
+ALTER TABLE `tbl_document`
+  ADD PRIMARY KEY (`doc_id`);
+
+--
 -- Indices de la tabla `tbl_esdeveniments`
 --
 ALTER TABLE `tbl_esdeveniments`
@@ -265,6 +282,11 @@ ALTER TABLE `tbl_activitats`
 --
 ALTER TABLE `tbl_classe`
   MODIFY `cla_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `tbl_document`
+--
+ALTER TABLE `tbl_document`
+  MODIFY `doc_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `tbl_esdeveniments`
 --
@@ -361,6 +383,10 @@ ALTER TABLE `tbl_esdeveniments`
 --
 ALTER TABLE `tbl_frase`
   ADD CONSTRAINT `FK_usu_idfrase` FOREIGN KEY (`usu_id`) REFERENCES `tbl_usuari` (`usu_id`);
+
+ALTER TABLE `tbl_document`
+  ADD CONSTRAINT `FK_usu_iddocument` FOREIGN KEY (`usu_id`) REFERENCES `tbl_usuari` (`usu_id`);
+
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
