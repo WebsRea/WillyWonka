@@ -10,19 +10,17 @@ extract($_REQUEST);
 $usu_id = $_SESSION['usu_id'];
 echo "$usu_id";
 include '../conexio.php';
-$cla_id = "";
-$query = "SELECT `cla_id` FROM `tbl_usuari` WHERE usu_id = $usu_id";
-// echo "$query";
-mysqli_query($conexio, $query);
-echo "mysqli_query($conexio, $query)";
-//$cla_id = mysqli_query($conexio, $query);
-$sql = "INSERT INTO `tbl_activitats` (`act_titol`, `act_data`, `act_text`, `cla_id`) VALUES ('$act_titol', '$act_data', '$act_text', '$cla_id');";
- echo "$sql";
-mysqli_query($conexio, $sql);
+include '../conexio.php';
 
 
-// header('Location:../mestre.php');
-
-
-
+$sql="SELECT * FROM tbl_usuari WHERE usu_id = $usu_id"; //
+$results=mysqli_query($conexio,$sql);
+if (mysqli_num_rows($results) != 0){
+	while ($usu = mysqli_fetch_array($results)) {
+		$result = $usu['cla_id'];
+	}
+}
+$query = "INSERT INTO `tbl_activitats` (`act_titol`, `act_data`, `act_text`, `cla_id`) VALUES ('$act_titol', '$act_data', '$act_text', '$result')";
+$resultados=mysqli_query($conexio,$query);
+//header('Location:../mestre.php');
  ?>
