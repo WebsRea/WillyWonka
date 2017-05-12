@@ -86,7 +86,16 @@
 
                 return false; // Evitar ejecutar el submit del formulario.
             };
-
+            // function comprobar(){
+            //   var email = document.getElementById('correu');
+            //   var pass1 = document.getElementById('usu_pass1');
+            //   if (email.value !== "" || pass1.value !== "" ) {
+            //     alert("gogogo");
+            //   } else {
+            //     alert("nope");
+            //     return false;
+            //   }
+            // }
 		
 			
 	</script>
@@ -100,18 +109,24 @@
 	 ?>
 </div>
 <form action="procs/editarPerfilPropi.proc.php">
-	
+	<div><?php 
+  if (isset($_SESSION['error'])) {
+      echo $_SESSION['error']; 
+      unset($_SESSION['error']);
+    }
+
+  ?></div>
 	<div id="meter">
-		Correu: <input type="email" name="usu_mail" disabled><br><a href="#" onclick="canviarMail()">Vull canviar el email</a>
+		Correu: <input type="email" name="usu_mail" id="correu" disabled><br><a href="#" onclick="canviarMail()">Vull canviar el email</a>
 	</div>
 	Antiga contrasenya:
 	<input type="password" name="pass_antigua">
 	<div id="meterPass">
-		Contrasenya: <input type="password" name="usu_pass1" disabled><br>
-		Repetir contrasenya: <input type="password" name="usu_pass2" disabled><br>
+		Contrasenya: <input type="password" name="usu_pass1" id="pass1" disabled><br>
+		Repetir contrasenya: <input type="password" name="usu_pass2" id="pass2" disabled><br>
 		<a href="#" onclick="canviarPass()">Vull canviar la contrasenya</a>
 	</div>
-	<input type="submit" name="enviar" value="enviar" onclick="comprobar()">
+	<input type="submit" name="enviar" value="enviar">
 
 	<!-- Correu: <div id="divMail"><input type="email" id="correuCheckbox" name="usu_mail"></div>
 	<div id="textCanviar">

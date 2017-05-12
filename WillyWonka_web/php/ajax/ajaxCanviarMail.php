@@ -1,1 +1,1 @@
-Correu: <input type="email" name="usu_mail"><br><a href="#" onclick="noCanviarMail()">No vull canviar el email</a>
+Correu: <input type="email" name="usu_mail" id="correu"><br><a href="#" onclick="noCanviarMail()">No vull canviar el email</a>
