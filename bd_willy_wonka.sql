@@ -276,6 +276,11 @@ ALTER TABLE `tbl_esdeveniments`
 ALTER TABLE `tbl_familia`
   MODIFY `fam_id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT de la tabla `tbl_frase`
+--
+ALTER TABLE `tbl_frase`
+  MODIFY `frase_id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT de la tabla `tbl_nen`
 --
 ALTER TABLE `tbl_nen`
