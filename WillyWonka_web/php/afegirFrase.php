@@ -13,8 +13,6 @@ echo "$usu_id";
 	<form name="anadirEvento" action="procs/afegirFrase.proc.php">
 		Frase:
 		<input type="textArea" name="frase_text"><br><br>
-		Dia de la frase:
-		<input type="date" name="frase_data"><br><br>
 		<input type="submit" name="enviar">
 	</form>
 </body>

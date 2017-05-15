@@ -9,9 +9,11 @@ include '../conexio.php';
 
 $sql="SELECT * FROM tbl_usuari WHERE usu_id = $usu_id"; //
 $results=mysqli_query($conexio,$sql);
+// $hoy = date("Y-m-d H:i:s");
+$hoy = date("Y-m-d");
 
-// Falta hacer el bucle para que siempre salga la frase más reciente.
-$query = "INSERT INTO `tbl_frase` (`frase_text`, `frase_data`, `usu_id`) VALUES ('$frase_text', now(), '$usu_id')";
+
+$query = "INSERT INTO `tbl_frase` (`frase_text`, `frase_data`, `usu_id`) VALUES ('$frase_text', '$hoy', '$usu_id')";
 $resultados=mysqli_query($conexio,$query);
 //header('Location:../admin.php');
  ?>
