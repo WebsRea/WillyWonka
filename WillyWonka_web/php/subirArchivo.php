@@ -5,15 +5,19 @@
 </head>
 <body>
 <form action="procs/subirArchivo.proc.php" method="post" enctype="multipart/form-data"> 
-   	<b>Campo de tipo texto:</b> 
+   	<b>Seleccioni que vol pujar:</b> 
    	<br> 
-   	<input type="text" name="cadenatexto" size="20" maxlength="100"> 
-   	<input type="hidden" name="MAX_FILE_SIZE" value="100000"> 
+      <select name="tipus_arxiu">
+         <option value="circular">Circular</option>
+         <option value="menu">Menú</option>
+         <option value="documentacio_inicial">Documentació Inicial</option>
+      </select> 
    	<br> 
-   	<br> 
+      <b>Seleccioni que vol pujar:</b> <br>
+      <input type="text" name="doc_titol"><br>
    	<b>Enviar un nuevo archivo: </b> 
    	<br> 
-   	<input name="userfile" type="file"> 
+   	<input type="file" name="fileToUpload" id="fileToUpload">
    	<br> 
    	<input type="submit" value="Enviar"> 
 </form>
