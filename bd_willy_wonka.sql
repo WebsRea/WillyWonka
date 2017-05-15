@@ -67,6 +67,7 @@ CREATE TABLE `tbl_document` (
 
 CREATE TABLE `tbl_esdeveniments` (
   `esd_id` int(11) NOT NULL,
+  `esd_titol` varchar(100) NOT NULL,
   `esd_data_ini` date NOT NULL,
   `esd_data_fin` date NOT NULL,
   `esd_text` text NOT NULL,
