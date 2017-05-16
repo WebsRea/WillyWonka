@@ -1,7 +1,7 @@
 <?php //NO OLVIDARSE DE PONER SESIONES!!!
 session_start(); 
 $usu_id = $_SESSION['usu_id'];
-echo "$usu_id";
+// echo "$usu_id";
 
 ?>
 <!DOCTYPE html>
