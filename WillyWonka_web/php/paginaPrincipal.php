@@ -2,13 +2,13 @@
 
 switch ($_SESSION['usu_tipus']) {
 	case 'admin':
-		header('Location:adminPrincipal.php');
+		header('Location:index_admin.php');
 		break;
 	case 'mestre':
-		header('Location:mestrePrincipal.php');
+		header('Location:index_mestre.php');
 		break;
 	case 'tutor':
-		header('Location:tutorPrincipal.php');
+		header('Location:index_tutor.php');
 		break;
 	
 	default:
