@@ -1,0 +1,183 @@
+body {
+	font-family: 'Alice', serif;
+}
+
+footer {
+	font-family: 'Alice', serif;
+	background-image: linear-gradient(-90deg, #047272, #C252FA);
+	padding: 20px;
+	
+}
+
+.btn{
+	border-radius: 60px;
+}
+
+.navegador{
+	background-color: white;
+}
+
+.frase {
+	background-image: linear-gradient(-90deg, #047272, #C252FA);
+	
+}
+
+.peu {
+	color: white;
+}
+
+
+.pfrase {
+	color: white;
+	font-size: 8em;
+}
+
+video {
+	width: 100%;
+	border-radius: 60px;
+	
+}
+
+.quisom img{
+	border-radius: 30px;
+}
+
+
+.video {
+	z-index: -1000;
+}
+
+
+.botonesnav{
+	margin-left: 150px;
+}
+
+.btn-willy {
+	background-color: #40689d;
+	color:white;
+	margin-top: 30px;
+}
+.btn-willy:hover{
+	background-color: #885cd0;
+	color:white;
+	margin-top: 30px;
+
+}
+
+.h1som {
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.psom {
+	font-size: 1.5em;
+	text-align: justify;
+}
+
+#historia {
+	padding-top: 100px;
+}
+#quefem {
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+#amiga {
+	padding-top: 100px;	
+}
+
+/*---------------*/
+/*---Admin---*/
+.h4inicio {
+	color: #be53f7;
+	/*text-align: right;*/
+}
+
+
+
+
+/*----------------*/
+/* Google Map */
+#map{
+	position: relative;
+	overflow: hidden;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	transition: all 0.7s;
+}
+
+/* Open and Close Styles */
+.close-map{
+	height: 0;
+}
+
+.open-map{
+	height: 500px;
+}
+
+/* Open and Close Button Styles */
+
+#map-btn1-div {
+	width: 100%;
+	background: #885cd0;
+}
+
+a.gmap-btn.btn-show {
+	display: block;
+}
+a.gmap-btn.btn-hide {
+	display: none;
+}
+a.gmap-btn{
+	height: auto;
+	color: black;
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	transition: all 0.7s;
+}
+
+a.gmap-btn:focus {
+	outline: 0;
+}
+
+.close-map-button{
+	padding:10px;
+	opacity: 1;
+}
+
+.open-map-button{
+	padding:10px;
+	opacity: 0.5;
+}
+
+#map .google-map-big-button:hover{
+	background:#885cd0;
+	color:#fff;
+}
+
+/* Google Map Div */
+#map #google-map{
+	height: 500px;
+	display: block;
+	position: absolute;
+	bottom:0;
+	width: 100%;
+	z-index: 1;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	transition: all 0.7s;
+}
+
+.close-map #google-map{
+	opacity: 0;
+}
+
+.open-map #google-map{
+	opacity: 1;
+}
+
+
