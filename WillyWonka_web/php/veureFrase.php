@@ -1,4 +1,5 @@
-<?php session_start();
+<?php 
+//session_start(); no necesita el session porque va como include en la veb index_admin (de momento)
 extract($_REQUEST);
 
 
@@ -11,10 +12,10 @@ $resultat = mysqli_query($conexio, $sql);
 // echo "$sql";
 if (mysqli_num_rows($resultat) != 0){
 	while ($fra = mysqli_fetch_array($resultat)) {
-		echo $fra['frase_text'];
+		echo "<h1 class='h1som'>" .$fra['frase_text']. "</h1>";
 	}
 }else{
-	echo "No hay ninguna frase disponible";
+	echo "<h1 class='h1som'>No n'hi ha cap frase disponible</h1>";
 }
 
 
