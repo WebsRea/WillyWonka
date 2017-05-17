@@ -1,6 +1,6 @@
 
 		
-	<form action="procs/login.proc.php">
+	<form action="php/procs/login.proc.php">
 		<div class="form-group">
 			<label>Correu</label><br>
 			<input type="text" name="usu_mail" placeholder="Correu"><br>
