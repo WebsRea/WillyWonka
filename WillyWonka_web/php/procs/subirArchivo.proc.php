@@ -3,15 +3,15 @@ include '../conexio.php';
 extract($_REQUEST);
 switch ($tipus_arxiu) {
 	case 'circular':
-		$target_dir = "/arxius/circular/";
+		$target_dir = "../arxius/circular/";
 		$doc_tipus = "circular";
 		break;
 	case 'documentacio_inicial':
-		$target_dir = "/arxius/documentacio_inicial/";
+		$target_dir = "../arxius/documentacio_inicial/";
 		$doc_tipus = "documentacio_inicial";
 		break;
 	case 'menu':
-		$target_dir = "/arxius/menu/";
+		$target_dir = "../arxius/menu/";
 		$doc_tipus = "menu";
 		break;
 	
