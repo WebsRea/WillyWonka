@@ -190,7 +190,7 @@
 						// alert('sduinco');
 				  	if (ajax.readyState==4) {
 						document.getElementById('ajaxPrincipal').innerHTML = ajax.responseText;
-						//buscador1();
+						buscador1();
 					}
 				}
 				//alert(accio);

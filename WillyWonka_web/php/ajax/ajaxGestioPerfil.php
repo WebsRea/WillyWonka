@@ -1,10 +1,11 @@
+<!-- ya está front-end -afegir nen -->
+
 <?php 
 extract($_REQUEST);
 include('../conexio.php');
 switch ($decisio) {
 	case 'afegirNen':
 		echo "
-			<div class='col-md-12'>
 			<h2 class='h2admin'>AFEGIR UN NOU INFANT</h2>
 			<div class='jumbotron frase'>
 			<p>Recorda que per introduir un nen nou has d'haver introduit primer els seus familiars.</p>
@@ -52,43 +53,63 @@ switch ($decisio) {
 				<input type='text' name='nen_malalties' placeholder='Malalties'>
 				</div>
 				<div class='col-md-12 margen_arriba'>
-				<input type='submit' name='ENVIAR' value='ENVIAR'>
+				<input type='submit' name='ENVIAR' value='ENVIAR' class='btn btn-willy text-center'>
 				</div>
+				<div class='col-md-12 margen_arriba'></div>
 			</form>
 			</div>
 		";
 		break;
 
 	case 'afegirTutor':
-		echo "
-			<form action='procs/afegirTutor.proc.php'>
-				<input type='text' name='usu_nom' placeholder='Nom'><br>
-				<input type='text' name='usu_cognoms' placeholder='Cognoms'><br>
-				<input type='text' name='usu_mail' placeholder='Correu'><br>
-				<input type='password' name='usu_pass' placeholder='Contrasenya'><br>
-				<input type='submit' name='ENVIAR'>
-			</form>
+		echo "<h2 class='h2admin'>AFEGIR UN NOU FAMILIAR</h2>
+			<div class='jumbotron frase'>
+				<p>El correu servirá per  fer comunicacions internes amb el familiar.</p>
+			</div>
+			<div class='col-md-12 margen_arriba'>
+				<form action='procs/afegirTutor.proc.php'>
+					<input type='text' name='usu_nom' placeholder='Nom'>
+					<input type='text' name='usu_cognoms' placeholder='Cognoms'>
+					<input type='text' name='usu_mail' placeholder='Correu'>
+					<input type='password' name='usu_pass' placeholder='Contrasenya'>
+					<div class='col-md-12 margen_arriba'>
+					<input type='submit' name='ENVIAR' class='btn btn-willy text-center'>
+					</div>
+				</form>
+			<div class='col-md-12 margen_arriba'></div>
+			</div>
+			
 		";
 		break;
 
 	case 'afegirMestre':
-		echo "
-			<form action='procs/afegirMestre.proc.php'>
-				<input type='text' name='usu_nom' placeholder='Nom'><br>
-				<input type='text' name='usu_cognoms' placeholder='Cognoms'><br>
-				<input type='text' name='usu_mail' placeholder='Correu'><br>
-				<input type='password' name='usu_pass' placeholder='Contrasenya'><br>
-				<input type='submit' name='ENVIAR'>
-			</form>
+		echo "<h2 class='h2admin'>AFEGIR UN NOU MESTRE</h2>
+			<div class='jumbotron frase'>
+				<p>El correu servirá per  fer comunicacions internes amb el mestre.</p>
+			</div>
+			<div class='col-md-12 margen_arriba'>
+				<form action='procs/afegirMestre.proc.php'>
+					<input type='text' name='usu_nom' placeholder='Nom'>
+					<input type='text' name='usu_cognoms' placeholder='Cognoms'>
+					<input type='text' name='usu_mail' placeholder='Correu'>
+					<input type='password' name='usu_pass' placeholder='Contrasenya' >
+					<div class='col-md-12 margen_arriba'>
+					<input type='submit' name='ENVIAR' class='btn btn-willy text-center'>
+					</div>
+				</form>
+			<div class='col-md-12 margen_arriba'></div>
+			</div>
 		";
 		break;
 	case 'editarNen':
 		echo "
 			Buscar:
 			<input type='text' id='buscador' onkeyup='buscador1()'>
+
 			<input type='hidden' id='decisio' value='$decisio'>
 			<div id='resultadosBusqueda'></div>
 			<div id='editarPerfil'></div>
+			<div class='col-md-12 margen_arriba'></div>
 		";
 		break;
 
