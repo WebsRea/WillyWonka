@@ -19,7 +19,7 @@
 					}
 					$sql = "INSERT INTO `tbl_nen` (`nen_id`, `nen_nom`, `nen_cognoms`, `nen_data_naixement`, `nen_alergies`, `nen_trastorns`, `nen_malaltia`, `fam_id`) VALUES (NULL, '$nen_nom', '$nen_cognoms', '$nen_data', '$nen_alergies', '$nen_trastorns', '$nen_malalties', '$fam_id');";
 					mysqli_query($conexio, $sql);
-					header('Location:../gestioPerfils.php');
+					//header('Location:../gestioPerfils.php');
 
 
 

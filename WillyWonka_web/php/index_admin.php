@@ -22,15 +22,10 @@
             header('location:../../index.php?err=1');
         }                      
     ?>
-    <title>WilyWonka</title>
-    <meta charset="utf-8" charset="ISO-8859-1">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="../css/main.css" rel="stylesheet" type="text/css">
-    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
+    <?php
+        include "includes_admin/head.php";
 
+    ?>
 </head>
 <body id="inicio">
 
@@ -49,22 +44,24 @@
             <div class="collapse navbar-collapse align-right" id="navbar1">
                  <div class="nav navbar-nav botonesnav">
                     <a href="gestioPerfils.php" class="btn btn-willy btn-lg">
-                    <img src="../img/001-chocolate.png"></img> Perfils </a>
+                    <img src="../img/001-chocolate.png"></img>Perfils </a>
+                    <a href="gestioClasses.php" class="btn btn-willy btn-lg">
+                    <img src="../img/001-chocolate.png"></img>Classes</a>
                     <a href="#" class="btn btn-willy btn-lg">
-                    <img src="../img/001-chocolate.png"></img> Qué fem </a>
-                    <a href="#" class="btn btn-willy btn-lg">
-                    <img src="../img/001-chocolate.png"></img> Escola amiga </a>
-                    <a href="#" class="btn btn-willy btn-lg">
+                    <img src="../img/001-chocolate.png"></img>Esdeveniments</a>
+                    <a href="#" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Contacte</a>
-                    <a href="../index.php" class="btn btn-willy btn-lg">
-                    <img src="../img/001-chocolate.png"></img> Sortir</a>
+                    <a href="#" class="btn btn-willy btn-lg" >
+                    <img src="../img/001-chocolate.png"></img> Contacte</a>
                 </div>
             </div>
             <div class="container">
                 <h4 class="h4inicio">
+                <div class="row">
                 <?php 
-                echo "Sigues benvingut, " . $_SESSION['usu_nom'] . ".<br>";
+                echo "Sigues benvingut, " . $_SESSION['usu_nom'] . " et quedes amb mi o prefereixes  <a href='../index.php'><i class='fa fa-power-off' aria-hidden='true'> Sortir</i></a> ?<br>";
                 ?>
+                </div>
                 </h4>
             </div>
 
@@ -104,19 +101,8 @@
     
 </body>
 <footer class="footer">
-    <div class="container">
-        <div class="col-md-6 text-justify peu">
-            <p>&copy;2017 websREA, SA. Tots els drets reservats</p>
-            <p><a class="peu" href="#">Avís legal</a></p>
-            <p><a class="peu" href="#">Política de privacitat</a></p>
-        </div>
-        <div class="col-md-6 text-right peu">
-        <p>La nostra adreça:</p>
-        <p>C/Carretera Ag.Garos, 17</p>
-        <p>08923 Viella</p>
-            
-        </div>
-    </div>
-
+  <?php
+  include "includes_admin/footer.php";
+  ?>
 </footer>
 </html>

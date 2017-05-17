@@ -103,7 +103,7 @@ CREATE TABLE `tbl_nen` (
   `nen_malaltia` varchar(500) NOT NULL,
   `nen_foto` varchar(500) NOT NULL,
   `fam_id` int(11) NOT NULL,
-  `obs_id` int(11) NOT NULL
+  `obs_id` int(11) NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

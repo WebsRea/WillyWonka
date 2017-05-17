@@ -91,6 +91,13 @@ video {
 	color: #be53f7;
 	/*text-align: right;*/
 }
+.padmin {
+	font-size: 1.5em;
+	text-align: justify;
+}
+.h2admin {
+	text-align: center;
+}
 
 
 
@@ -166,6 +173,7 @@ a.gmap-btn:focus {
 	position: absolute;
 	bottom:0;
 	width: 100%;
+	/*left: 15%;*/
 	z-index: 1;
 	-webkit-transition: all 0.7s;
 	-moz-transition: all 0.7s;

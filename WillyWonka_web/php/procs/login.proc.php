@@ -15,21 +15,7 @@ $resultat=mysqli_query($conexio, $sql);
 			$_SESSION['usu_id'] = $usuari['usu_id'];
 			$_SESSION['usu_tipus'] = $usuari['usu_tipus'];
 			$_SESSION['usu_nom'] = $usuari['usu_nom'] . " " . $usuari['usu_cognoms'];
-			switch ($_SESSION['usu_tipus']) {
-				case 'tutor':
-					header('Location:../tutor.php');
-					break;
-				case 'mestre':
-					header('Location:../mestre.php');
-					break;
-				case 'admin':
-					header('Location:../admin.php');
-					break;
-				
-				default:
-					header('Location:tancaSessio.proc.php');
-					break;
-			}
+			header('Location:../paginaPrincipal.php');
 		}
 	} else {
 		//header('location:../../index.php?err=1');

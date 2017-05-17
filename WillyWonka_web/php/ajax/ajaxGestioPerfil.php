@@ -4,8 +4,11 @@ include('../conexio.php');
 switch ($decisio) {
 	case 'afegirNen':
 		echo "
+			<div class='col-md-12'>
+			<h2 class='h2admin'>Afegir un nou infant</h2>
+			<p></p>
 			<form action='procs/afegirNen.proc.php'>
-				<h3>Afegir un nou infant</h3>
+				
 				familiar1:
 				<select name='usu_id1'>
 			";
@@ -39,6 +42,7 @@ switch ($decisio) {
 				<input type='text' name='nen_malalties' placeholder='Malalties'><br>
 				<input type='submit' name='ENVIAR' value='ENVIAR'>
 			</form>
+			</div>
 		";
 		break;
 
