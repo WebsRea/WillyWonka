@@ -5,11 +5,14 @@ switch ($decisio) {
 	case 'afegirNen':
 		echo "
 			<div class='col-md-12'>
-			<h2 class='h2admin'>Afegir un nou infant</h2>
-			<p></p>
+			<h2 class='h2admin'>AFEGIR UN NOU INFANT</h2>
+			<div class='jumbotron frase'>
+			<p>Recorda que per introduir un nen nou has d'haver introduit primer els seus familiars.</p>
+			</div>
+			
 			<form action='procs/afegirNen.proc.php'>
-				
-				familiar1:
+				<div class='col-md-4'>
+				<label>Primer Familiar</label>
 				<select name='usu_id1'>
 			";
 
@@ -22,8 +25,10 @@ switch ($decisio) {
 						}
 					}
 				 echo "
-				</select><br>
-				familiar2:
+				</select>
+				</div>
+				<div class='col-md-4'>
+				<label>Segon Familiar</label>
 				<select name='usu_id2'>";
 					$resultats=mysqli_query($conexio, $sql);
 					if (mysqli_num_rows($resultats) != 0 ) {
@@ -33,14 +38,22 @@ switch ($decisio) {
 						}
 					}
 				echo "
-				</select><br>
-				<input type='text' name='nen_nom' placeholder='Nom'><br>
-				<input type='text' name='nen_cognoms' placeholder='Cognoms'><br>
-				<input type='date' name='nen_data'><br>
-				<input type='text' name='nen_alergies' placeholder='Alergies'><br>
-				<input type='text' name='nen_trastorns' placeholder='Trastorns'><br>
-				<input type='text' name='nen_malalties' placeholder='Malalties'><br>
+				</select>
+				</div>
+				<div class='col-md-4'></div>
+				<div class='col-md-12 margen_arriba'>
+					<input type='text' name='nen_nom' placeholder='Nom' class='margen_derecho'> 
+					<input type='text' name='nen_cognoms' placeholder='Cognoms' class='margen_derecho'>
+					<input type='date' name='nen_data'>
+				</div>
+				<div class='col-md-12 margen_arriba'>
+				<input type='text' name='nen_alergies' placeholder='Alergies'>
+				<input type='text' name='nen_trastorns' placeholder='Trastorns'>
+				<input type='text' name='nen_malalties' placeholder='Malalties'>
+				</div>
+				<div class='col-md-12 margen_arriba'>
 				<input type='submit' name='ENVIAR' value='ENVIAR'>
+				</div>
 			</form>
 			</div>
 		";

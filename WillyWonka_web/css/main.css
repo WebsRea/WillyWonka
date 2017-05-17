@@ -94,11 +94,19 @@ video {
 .padmin {
 	font-size: 1.5em;
 	text-align: justify;
+	/*color: white;*/
 }
 .h2admin {
 	text-align: center;
-}
+	color: #6162b4;
 
+}
+.margen_arriba {
+	padding-top: 20px;
+}
+.margen_derecho {
+	margin-right: 20px;
+}
 
 
 
