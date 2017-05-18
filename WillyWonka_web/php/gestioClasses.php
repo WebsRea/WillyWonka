@@ -112,25 +112,26 @@
 
     	<div class="container padmin">
     	<?php 
+
     	include('conexio.php');
 
-$sql = "SELECT * FROM tbl_classe";
+			$sql = "SELECT * FROM tbl_classe";
 
-$resultat=mysqli_query($conexio, $sql);
+			$resultat=mysqli_query($conexio, $sql);
 				// echo "foisndfuignfdiuog";
-	if (mysqli_num_rows($resultat) != 0 ) {
-		echo "<h4>Selecciona una classe a editar</h4><br><table><tr>";
-		while ($classe = mysqli_fetch_array($resultat)) {
-			$id = $classe['cla_id'];
-			$nom = $classe['cla_nom'];
-			echo "<td><a href='editarClasse.php?id=$id'>    $nom        </a></td>";
-			}
-		echo "</tr></table>";
-	} else {
-		//header('location:../../index.php?err=1');
-		echo "No hi han classes disponibles :(";
-	}                      
-?><br><br>
+			if (mysqli_num_rows($resultat) != 0 ) {
+				echo "<h4>Selecciona una classe a editar</h4><br><table><tr>";
+				while ($classe = mysqli_fetch_array($resultat)) {
+					$id = $classe['cla_id'];
+					$nom = $classe['cla_nom'];
+					echo "<td><a href='editarClasse.php?id=$id'>    $nom        </a></td>";
+					}
+				echo "</tr></table>";
+			} else {
+				//header('location:../../index.php?err=1');
+				echo "No hi han classes disponibles :(";
+			}                      
+		?>
 <a href="#" onclick="veureAfegirClasse()">Afegir una classe</a><br><br>
 <div id="afegirClasse"></div>
     		
