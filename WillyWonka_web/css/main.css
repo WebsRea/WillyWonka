@@ -111,6 +111,23 @@ video {
 	color: #6162b4;
 }
 
+/*---------------*/
+/*---Padres---*/
+
+.h2fam {
+	text-align: center;
+	color: white;
+
+}
+.pfam {
+	font-size: 1.5em;
+	text-align: justify;
+	color: white;
+}
+
+.pfam img{
+	margin-left: 40px;
+}
 
 /*----------------*/
 /* Google Map */
