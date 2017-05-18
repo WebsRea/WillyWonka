@@ -1,5 +1,5 @@
 <?php 
-
+//FRONTENIZADO
 //session_start(); aquí se tiene que quitar el sesion estar porque se incluye en una página que ya lo tiene inciado y si lo dejamos peta.
 $id = $_SESSION['usu_id'];
 $tipus = $_SESSION['usu_tipus'];
