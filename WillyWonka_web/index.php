@@ -213,8 +213,9 @@
     <script src="js/jquery.min.js"></script>     
     <script src="js/bootstrap.min.js"></script>
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyAhXaF13fF5Exi4nzqVZ_PD1q9bO_O8Y_M&callback=initMap"></script>
-   
- <script src="js/gmap.js"></script>
+    <script src="js/gmap.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="jquery.slides.min.js"></script>
 </body>
 <footer class="footer">
     <div class="container">
