@@ -1,4 +1,6 @@
-<?php session_start();
+<?php 
+
+//session_start(); aquí se tiene que quitar el sesion estar porque se incluye en una página que ya lo tiene inciado y si lo dejamos peta.
 $id = $_SESSION['usu_id'];
 $tipus = $_SESSION['usu_tipus'];
 include('conexio.php');
@@ -18,6 +20,7 @@ $sql = "SELECT * FROM tbl_nen where fam_id = $fam_id";
 $resultat = mysqli_query($conexio, $sql);
 if (mysqli_num_rows($resultat) != 0 ) {
 	while ($nen = mysqli_fetch_array($resultat)) {
+		echo "<br><img src='../img/personas.png'>";
 		echo "<br><b>Nom: </b>" . $nen['nen_nom'] . " " . $nen['nen_cognoms'];
 		echo "<br><b>Data naixement: </b>" . $nen['nen_data_naixement'];
 		echo "<br><b>Alergies: </b>" . $nen['nen_alergies'];
@@ -25,6 +28,4 @@ if (mysqli_num_rows($resultat) != 0 ) {
 		echo "<br><b>Malalties: </b>" . $nen['nen_malaltia']."<br><br>";
 	}
 }
-
-
- ?>
+?>

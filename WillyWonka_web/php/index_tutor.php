@@ -71,12 +71,13 @@
    
      <div class="jumbotron frase">
 
-        <p> <?php include "veureFrase.php";?></p>
+        <p> <?php include "veureFichaFills.php";?></p>
         
     </div>
 
     <div class="container">
-     
+    
+
     </div>
     
 </body>
