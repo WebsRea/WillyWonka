@@ -119,6 +119,7 @@ switch ($decisio) {
 			<input type='hidden' id='decisio' value='$decisio'>
 			<div id='resultadosBusqueda'></div>	
 			<div id='editarPerfil'></div>
+			<div class='col-md-12 margen_arriba'></div>
 		";
 		break;
 

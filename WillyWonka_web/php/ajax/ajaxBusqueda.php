@@ -26,42 +26,24 @@ switch ($decisioBusqueda) {
 		
 		break;
 	case 'editarTutor':
-		if ($busqueda != "") {
-		
 			$sql = "SELECT * FROM tbl_usuari WHERE (usu_nom LIKE '%$busqueda%' OR usu_cognoms LIKE '%$busqueda%') AND usu_tipus = 'tutor'";
 			$resultat = mysqli_query($conexio, $sql);
 			if (mysqli_num_rows($resultat) != 0 ) {
-				echo "<table><tr><h1><td>Nom</td><td>Cognom</td><td>Acció</td><h1></tr>";
+				echo "<table class='table table-hover'><tr class='datos_tabla'><th>Nom</th><th>Cognom</th><th>Acció</th></tr>";
 				while ($usu = mysqli_fetch_array($resultat)) {
 					$id = $usu['usu_id'];
-					echo "<tr><td>" . $usu['usu_nom'] . "</td><td>" . $usu['usu_cognoms'] . "</td><td><a href='#' onclick='editarTutor($id)'>Modificar</a></td></tr>";
+					echo "<tbody><tr><td>" . $usu['usu_nom'] . "</td><td>" . $usu['usu_cognoms'] . "</td><td><a href='#' onclick='editarTutor($id)'>Modificar</a></td></tr></tbody>";
 				}
 				echo "</table>";
 			}else{echo "No hi han dades :'(";}
 			// echo "$sql";
 			
-		}else{
-			$sql = "SELECT * FROM tbl_usuari WHERE (usu_nom LIKE '%$busqueda%' OR usu_cognoms LIKE '%$busqueda%') AND usu_tipus = 'tutor'";
-			$resultat = mysqli_query($conexio, $sql);
-			if (mysqli_num_rows($resultat) != 0 ) {
-				echo "<table><tr><h1><td>Nom</td><td>Cognom</td><td>Acció</td><h1></tr>";
-				while ($usu = mysqli_fetch_array($resultat)) {
-					$id = $usu['usu_id'];
-					echo "<tr><td>" . $usu['usu_nom'] . "</td><td>" . $usu['usu_cognoms'] . "</td><td><a href='#' onclick='editarTutor($id)'>Modificar</a></td></tr>";
-				}
-				echo "</table>";
-			}else{echo "No hi han dades :'(";}
-			// echo "$sql";
-			
-		}
 		break;
 	case 'editarMestre':
-		if ($busqueda != "") {
-		
 			$sql = "SELECT * FROM tbl_usuari WHERE (usu_nom LIKE '%$busqueda%' OR usu_cognoms LIKE '%$busqueda%') AND usu_tipus = 'mestre'";
 			$resultat = mysqli_query($conexio, $sql);
 			if (mysqli_num_rows($resultat) != 0 ) {
-				echo "<table><tr><h1><td>Nom</td><td>Cognom</td><td>Acció</td><h1></tr>";
+				echo "<table class='table table-hover'><tr class='datos_tabla'><th>Nom</th><th>Cognom</th><th>Acció</th></tr>";
 				while ($usu = mysqli_fetch_array($resultat)) {
 					$id = $usu['usu_id'];
 					echo "<tr><td>" . $usu['usu_nom'] . "</td><td>" . $usu['usu_cognoms'] . "</td><td><a href='#' onclick='editarMestre($id)'>Modificar</a></td></tr>";
@@ -69,21 +51,7 @@ switch ($decisioBusqueda) {
 				echo "</table>";
 			}else{echo "No hi han dades :'(";}
 			// echo "$sql";
-			
-		}else{
-			$sql = "SELECT * FROM tbl_usuari WHERE (usu_nom LIKE '%$busqueda%' OR usu_cognoms LIKE '%$busqueda%') AND usu_tipus = 'mestre'";
-			$resultat = mysqli_query($conexio, $sql);
-			if (mysqli_num_rows($resultat) != 0 ) {
-				echo "<table><tr><h1><td>Nom</td><td>Cognom</td><td>Acció</td><h1></tr>";
-				while ($usu = mysqli_fetch_array($resultat)) {
-					$id = $usu['usu_id'];
-					echo "<tr><td>" . $usu['usu_nom'] . "</td><td>" . $usu['usu_cognoms'] . "</td><td><a href='#' onclick='editarMestre($id)'>Modificar</a></td></tr>";
-				}
-				echo "</table>";
-			}else{echo "No hi han dades :'(";}
-			// echo "$sql";
-			
-		}
+
 
 		break;
 	case 'eliminaNen':
