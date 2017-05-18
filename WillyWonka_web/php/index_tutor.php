@@ -47,7 +47,7 @@
                     <img src="../img/001-chocolate.png"></img>Perfils </a>
                     <a href="veureActivitats.php" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Activitats</a>
-                    <a href="#" class="btn btn-willy btn-lg">
+                    <a href="veureMenus.php" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Menu del dia</a>
                     <a href="#" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Contacte</a>

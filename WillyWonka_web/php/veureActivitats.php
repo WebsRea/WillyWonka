@@ -17,28 +17,28 @@
                     <span class="sr-only">Alternar menu</span>
                     <img src="../img/001-chocolate.png"></img>               
                 </button>
-                <a href="index_admin.php"><img class="img-responsive" src="../img/LogoWW_SD.png" alt=""></a>
+                <a href="index_tutor.php"><img class="img-responsive" src="../img/LogoWW_SD.png" alt=""></a>
             </div>
             <!-- Links del menu -->
             <div class="collapse navbar-collapse align-right" id="navbar1">
                  <div class="nav navbar-nav botonesnav">
-                    <a href="gestioPerfils.php" class="btn btn-willy btn-lg">
+                    <a href="index_tutor.php" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Perfils </a>
-                    <a href="gestioClasses.php" class="btn btn-willy btn-lg">
-                    <img src="../img/001-chocolate.png"></img>Classes</a>
-                    <a href="#" class="btn btn-willy btn-lg">
-                    <img src="../img/001-chocolate.png"></img>Esdeveniments</a>
-                    <a href="#" class="btn btn-willy btn-lg" >
-                    <img src="../img/001-chocolate.png"></img> Documents</a>
+                    <a href="veureActivitats.php" class="btn btn-willy btn-lg">
+                    <img src="../img/001-chocolate.png"></img>Activitats</a>
+                    <a href="veureMenus.php" class="btn btn-willy btn-lg">
+                    <img src="../img/001-chocolate.png"></img>Menu del dia</a>
                     <a href="#" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Contacte</a>
+                    <a href="#" class="btn btn-willy btn-lg" >
+                    <img src="../img/001-chocolate.png"></img> Suro</a>
                 </div>
             </div>
             <div class="container">
                 <h4 class="h4inicio">
                 <div class="row">
                 <?php 
-                echo "Perfecte! modifiquem alguns perfils " . $_SESSION['usu_nom'] . " o prefereixes  <a href='../index.php'><i class='fa fa-power-off' aria-hidden='true'> Sortir</i></a> ?<br>";
+                echo "Aquí pots veure les activitats dels teus infants " . $_SESSION['usu_nom'] . " o prefereixes  <a href='../index.php'><i class='fa fa-power-off' aria-hidden='true'> Sortir</i></a> ?<br>";
                 ?>
                 </div>
                 </h4>
