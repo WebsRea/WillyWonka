@@ -107,7 +107,9 @@ video {
 .margen_derecho {
 	margin-right: 20px;
 }
-
+.datos_tabla {
+	color: #6162b4;
+}
 
 
 /*----------------*/

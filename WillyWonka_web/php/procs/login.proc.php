@@ -18,7 +18,7 @@ $resultat=mysqli_query($conexio, $sql);
 			header('Location:../paginaPrincipal.php');
 		}
 	} else {
-		//header('location:../../index.php?err=1');
-		echo "$sql";
+		header('location:../../index.php?err=1');
+		//echo "$sql";
 	}                      
 ?>

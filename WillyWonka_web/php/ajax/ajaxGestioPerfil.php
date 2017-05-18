@@ -102,10 +102,9 @@ switch ($decisio) {
 		";
 		break;
 	case 'editarNen':
-		echo "
-			Buscar:
+		echo "<h2 class='h2admin'>MODIFIQUEM UN INFANT</h2>
+			<label><img src='../img/icon/001-la-computacion-en-nube-6.png'> Buscar:</label>
 			<input type='text' id='buscador' onkeyup='buscador1()'>
-
 			<input type='hidden' id='decisio' value='$decisio'>
 			<div id='resultadosBusqueda'></div>
 			<div id='editarPerfil'></div>
@@ -114,8 +113,8 @@ switch ($decisio) {
 		break;
 
 	case 'editarTutor':
-		echo "
-			Buscar:
+		echo "<h2 class='h2admin'>MODIFIQUEM UN FAMILIAR</h2>
+			<label><img src='../img/icon/001-la-computacion-en-nube-6.png'> Buscar:</label>
 			<input type='text' id='buscador' onkeyup='buscador1()'>
 			<input type='hidden' id='decisio' value='$decisio'>
 			<div id='resultadosBusqueda'></div>	
@@ -124,8 +123,8 @@ switch ($decisio) {
 		break;
 
 	case 'editarMestre':
-		echo "
-			Buscar:
+		echo "<h2 class='h2admin'>MODIFIQUEM UN MESTRE</h2>
+			<label><img src='../img/icon/001-la-computacion-en-nube-6.png'> Buscar:</label>
 			<input type='text' id='buscador' onkeyup='buscador1()'>
 			<input type='hidden' id='decisio' value='$decisio'>
 			<div id='resultadosBusqueda'></div>
@@ -134,8 +133,8 @@ switch ($decisio) {
 		break;
 
 	case 'eliminaNen':
-		echo "
-			Buscar:
+		echo "<h2 class='h2admin'>ELIMINEM UN INFANT</h2>
+			<label><img src='../img/icon/001-la-computacion-en-nube-6.png'> Buscar:</label>
 			<input type='text' id='buscador' onkeyup='buscador1()'>
 			<input type='hidden' id='decisio' value='$decisio'>
 			<div id='resultadosBusqueda'></div>
@@ -144,8 +143,8 @@ switch ($decisio) {
 		break;
 
 	case 'eliminaTutor':
-		echo "
-			Buscar:
+		echo "<h2 class='h2admin'>ELIMINEM UN FAMILIAR</h2>
+			<label><img src='../img/icon/001-la-computacion-en-nube-6.png'> Buscar:</label>
 			<input type='text' id='buscador' onkeyup='buscador1()'>
 			<input type='hidden' id='decisio' value='$decisio'>
 			<div id='resultadosBusqueda'></div>
@@ -154,8 +153,8 @@ switch ($decisio) {
 		break;
 
 	case 'eliminaMestre':
-		echo "
-			Buscar:
+		echo "<h2 class='h2admin'>ELIMINEM UN MESTRE</h2>
+			<label><img src='../img/icon/001-la-computacion-en-nube-6.png'> Buscar:</label>
 			<input type='text' id='buscador' onkeyup='buscador1()'>
 			<input type='hidden' id='decisio' value='$decisio'>
 			<div id='resultadosBusqueda'></div>

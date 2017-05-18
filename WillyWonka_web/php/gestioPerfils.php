@@ -213,7 +213,7 @@
                     <span class="sr-only">Alternar menu</span>
                     <img src="../img/001-chocolate.png"></img>               
                 </button>
-                <a href="#inicio"><img class="img-responsive" src="../img/LogoWW_SD.png" alt=""></a>
+                <a href="index_admin.php"><img class="img-responsive" src="../img/LogoWW_SD.png" alt=""></a>
             </div>
             <!-- Links del menu -->
             <div class="collapse navbar-collapse align-right" id="navbar1">
@@ -225,7 +225,7 @@
                     <a href="#" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Esdeveniments</a>
                     <a href="#" class="btn btn-willy btn-lg" >
-                    <img src="../img/001-chocolate.png"></img> Contacte</a>
+                    <img src="../img/001-chocolate.png"></img> Documents</a>
                     <a href="#" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Contacte</a>
                 </div>
@@ -289,26 +289,7 @@
     
 
     <div class="container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <!-- aquí va el include de la frase -->
 
     </div>
     

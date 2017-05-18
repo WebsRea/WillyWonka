@@ -49,7 +49,7 @@
                     <img src="../img/001-chocolate.png"></img>Classes</a>
                     <a href="#" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Esdeveniments</a>
-                    <a href="#" class="btn btn-willy btn-lg" >
+                    <a href="" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Contacte</a>
                     <a href="#" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Contacte</a>
