@@ -55,7 +55,7 @@
 	$sql = "SELECT * FROM tbl_document WHERE doc_tipus = 'menu' ORDER BY doc_id DESC";
 	include('conexio.php');
 	$resultat = mysqli_query($conexio, $sql);
-	echo "<h2 class='h2fam'>Aquest és el menu de la setmana</h2>";
+	echo "<h2 class='h2fam'>Aquest és el <img src='../img/icon/menu.png'></img> de la setmana</h2>";
 	if (mysqli_num_rows($resultat) != 0 ) {
 		while ($doc = mysqli_fetch_array($resultat)) {
 			echo $doc['doc_nom'] . " ---- " . $doc['doc_ruta'] . "<br>";
