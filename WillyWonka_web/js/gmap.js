@@ -20,7 +20,8 @@
 			function initialize() {
 			  var mapOptions = {
 				zoom: 15,
-				center: folsom,  
+				center: folsom, 
+				panControl: false, 
 			  };
 
 			  map = new google.maps.Map(document.getElementById('google-map'),
@@ -36,6 +37,8 @@
 			}
 
 			function toggleBounce() {
+
+
 
 			  if (marker.getAnimation() != null) {
 				marker.setAnimation(null);

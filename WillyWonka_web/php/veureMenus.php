@@ -38,7 +38,7 @@
                 <h4 class="h4inicio">
                 <div class="row">
                 <?php 
-                echo "Aquí pots veure les activitats dels teus infants " . $_SESSION['usu_nom'] . " o prefereixes  <a href='../index.php'><i class='fa fa-power-off' aria-hidden='true'> Sortir</i></a> ?<br>";
+                echo "Et quedes amb mi " . $_SESSION['usu_nom'] . " o prefereixes  <a href='../index.php'><i class='fa fa-power-off' aria-hidden='true'> Sortir</i></a> ?<br>";
                 ?>
                 </div>
                 </h4>
