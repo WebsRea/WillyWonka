@@ -1,15 +1,23 @@
-<?php session_start();
+<?php 
+
+//session_start();
 extract($_REQUEST);
 
 
 $usu_id = $_SESSION['usu_id'];
-include '/conexio.php';
+include 'conexio.php';
 	?>
 <!DOCTYPE html>
 
 <html> 
 <body> 
   <div>
+
+<!-- tengo que hacer que se vea todo si eres el admin -->
+
+
+
+
 <?php 
 
 $sql="SELECT * FROM tbl_esdeveniments WHERE now() BETWEEN esd_data_ini AND esd_data_fin OR esd_data_ini <= NOW() + INTERVAL 1 WEEK AND esd_data_fin >= NOW() + INTERVAL 1 WEEK ORDER BY esd_data_ini DESC"; 

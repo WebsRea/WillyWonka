@@ -50,45 +50,42 @@
     </nav>
     <!-- /.nav -->
    
-     <div class="jumbotron frase">
-
-       
-	<form name="anadirEvento" action="procs/afegirEsdeveniment.proc.php">
-		Nom de l'esdeveniment:
-		<input type="textArea" name="esd_titol"><br><br>
-		Descripció:<br>
-		<textarea name="esd_text" maxlength="500"></textarea><br><br>
-		Dia de l'inici de l'esdeveniment:
-		<input type="date" name="esd_data_ini"><br><br>
-		Dia del final de l'esdeveniment:
-		<input type="date" name="esd_data_fin"><br><br>
-		<input type="submit" name="enviar">
-	</form>
+    <div class="jumbotron frase">
+   		<div class="container">
+   			<div class="row">
+		    	<h2 class="text-center">Crea els esdeveniments de la llar d'infants</h2> 
+		    </div>
+		    	<div class="col-md-4"></div>
+		    	<div class="col-md-4 padmin"> 
+					<form name="anadirEvento" action="procs/afegirEsdeveniment.proc.php">
+						<div class="form-group">
+						<lable>Nom de l'esdeveniment:</lable>
+						<input type="textArea" name="esd_titol" class="form-control">
+						</div>
+						<div class="form-group">
+						<lable>Descripció:</lable>
+						<textarea name="esd_text" maxlength="500" class="form-control"></textarea>
+						</div>
+						<div class="form-group">
+						<lable>Dia de l'inici de l'esdeveniment:</lable>
+						<input type="date" name="esd_data_ini" class="form-control">
+						</div>
+						<div class="form-group">
+						<lable>Dia del final de l'esdeveniment:</lable>
+						<input type="date" name="esd_data_fin" class="form-control"	>
+						</div>
+						<input type="submit" name="enviar" class="btn btn-willy">
+					</form>
+				</div>
+		</div>
         
     </div>
 
     <div class="container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+    	<?php
+		  include "mostrarEsdeveniment.php";
+		?>
+        
     </div>
     
 </body>

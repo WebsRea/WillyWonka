@@ -9,7 +9,7 @@ $sql = "INSERT INTO `tbl_esdeveniments` (`esd_titol`, `esd_data_ini`, `esd_data_
 mysqli_query($conexio, $sql);
 
 
-header('Location:../admin.php');
+header('Location:../afegirEsdeveniment.php');
 
 
 
