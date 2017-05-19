@@ -27,25 +27,25 @@
 					switch ($quantitat) {
 						case 'ple':
 							$radioStocks = "
-								<input type='radio' name='stock' value='ple' onclick='modStock($stonen_id,ple)' checked> ple<br>
-								<input type='radio' name='stock' value='alerta' onclick='modStock($stonen_id,alert)'> alerta<br>
-								<input type='radio' name='stock' value='escola' onclick='modStock($stonen_id,escola)'>escola<br> 
+								<input type='radio' name='$stonen_id' value='ple' onclick='modStock(".$stonen_id.",\"ple\")' checked> ple<br>
+								<input type='radio' name='$stonen_id' value='alerta' onclick='modStock(".$stonen_id.",\"alerta\")'> alerta<br>
+								<input type='radio' name='$stonen_id' value='escola' onclick='modStock(".$stonen_id.",\"escola\")'>escola<br> 
 							";
 							break;
 
 						case 'alerta':
 							$radioStocks = "
-								<input type='radio' name='stock' value='ple' onclick='modStock($stonen_id,ple)'> ple<br>
-								<input type='radio' name='stock' value='alerta' onclick='modStock($stonen_id,alert)' checked> alert<br>
-								<input type='radio' name='stock' value='escola' onclick='modStock($stonen_id,escola)'>escola<br> 
+								<input type='radio' name='$stonen_id' value='ple' onclick='modStock(".$stonen_id.",\"ple\")'> ple<br>
+								<input type='radio' name='$stonen_id' value='alerta' onclick='modStock(".$stonen_id.",\"alerta\")' checked> alert<br>
+								<input type='radio' name='$stonen_id' value='escola' onclick='modStock(".$stonen_id.",\"escola\")'>escola<br> 
 							";
 							break;
 
 						case 'escola':
 							$radioStocks = "
-								<input type='radio' name='stock' value='ple' onclick='modStock($stonen_id,ple)'> ple<br>
-								<input type='radio' name='stock' value='alerta' onclick='modStock($stonen_id,alert)'> alert<br>
-								<input type='radio' name='stock' value='escola' onclick='modStock($stonen_id,escola)' checked>escola<br> 
+								<input type='radio' name='$stonen_id' value='ple' onclick='modStock(".$stonen_id.",\"ple\")'> ple<br>
+								<input type='radio' name='$stonen_id' value='alerta' onclick='modStock(".$stonen_id.",\"alerta\")'> alert<br>
+								<input type='radio' name='$stonen_id' value='escola' onclick='modStock(".$stonen_id.",\"escola\")' checked>escola<br> 
 							";
 							break;
 						
@@ -59,6 +59,6 @@
 				}
 			}
 		}
-			echo "</table>";
+			echo "</table><div id='oculto'>";
 	}
  ?>

@@ -40,16 +40,32 @@ function carregar(){
 	return false; // Evitar ejecutar el submit del formulario.
 };
 
+function modStock1(stonen_id,quantitat){
+	alert(stonen_id);
+	alert(quantitat);
+	var ajax=objetoAjax();
+
+	ajax.open("POST", 'ajax/ajaxEditarStonen.php?stonen_id='+stonen_id+'&quantitat='+quantitat, true);
+	ajax.onreadystatechange=function() {
+		if (ajax.readyState==4) {
+			// document.getElementById('oculto').innerHTML = ajax.responseText;
+		}
+	}
+	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	ajax.send("stonen_id="+stonen_id+"quantitat="+quantitat);
+};
 
 
 function modStock(stonen_id,quantitat){
-	var url = "ajax/ajaxBusqueda.php?stonen_id="+stonen_id+"&quantitat="+quantitat; // El script a dónde se realizará la petición.
+		alert("nbifusdgusdfiod");
+	var url = "ajax/ajaxEditarStonen.php?stonen_id="+stonen_id+"&quantitat="+quantitat; // El script a dónde se realizará la petición.
 	$.ajax({
 		type: "POST",
 		url: url, // Adjuntar los campos del formulario enviado.
 		success: function(data)
 		{
-			$("#resultadosBusqueda").html(data); // Mostrar la respuestas del script PHP.
+			alert("estoy dentro");
+			carregar();
 		}
 	});
 
