@@ -1,0 +1,1 @@
+INSERT INTO `tbl_stock` (`sto_id`, `sto_nom`) VALUES (NULL, 'Bolquers'), (NULL, 'Tovalloletes'), (NULL, 'Crema'), (NULL, 'Mudes'), (NULL, 'Pitets'), (NULL, 'Xumets');

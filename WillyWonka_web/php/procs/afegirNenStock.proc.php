@@ -18,8 +18,22 @@
 						}
 					}
 					$sql = "INSERT INTO `tbl_nen` (`nen_id`, `nen_nom`, `nen_cognoms`, `nen_data_naixement`, `nen_alergies`, `nen_trastorns`, `nen_malaltia`, `fam_id`, `obs_id`, `cla_id`) VALUES (NULL, '$nen_nom', '$nen_cognoms', '$nen_data', '$nen_alergies', '$nen_trastorns', '$nen_malalties', '$fam_id', NULL , NULL);";
-				echo "$sql";
+					echo "$sql";
 					mysqli_query($conexio, $sql);
+
+					$nen_id = mysqli_insert_id($conexio);
+
+					$sqlStock = "SELECT * FROM tbl_stock";
+					$resultatStock=mysqli_query($conexio, $sqlStock);
+					if (mysqli_num_rows($resultatStock) != 0 ) {
+						while ($stock = mysqli_fetch_array($resultatStock)) {
+							$stock_id = $stock['sto_id'];
+							echo "Lo hace";
+							$insertStockNen = "INSERT INTO `tbl_stock_nen` (`stonen_id`, `sto_id`, `nen_id`, `stonen_quantitat`) VALUES (NULL, '$stock_id', '$nen_id', 'ple')";
+							mysqli_query($conexio, $insertStockNen);
+						}
+					}
+
 
 					header('Location:../gestioPerfils.php');
 					// header('Location:../gestioPerfils.php');
