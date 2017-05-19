@@ -20,20 +20,20 @@ $sql = "SELECT * FROM tbl_nen WHERE nen_id = $id";
 						<div class='col-md-4'></div>
 						<div class='col-md-4'>
 							<div class='form-group'>
-	                    	<label>Nom</label>
-							<input type='text' name='nom' value='$nom' class='form-control'>
-							<label>Cognoms</label>
-							<input type='text' name='cognoms' value='$cognoms' class='form-control'>
-							<label>Data naixament</label>
-							<input type='date' name='data' value='$data' class='form-control'>
-							<label>Alergies</label>
-							<input type='text' name='alergies' value='$alergies' class='form-control'>
-							<label>Trastorns</label>
-							<input type='text' name='trastorns' value='$trastorns' class='form-control'>
-							<label>Malalties</label>
-							<input type='text' name='malalties' value='$malalties' class='form-control'>
-							<input type='hidden' name='id' value='$id'><br> 
-							<input type='submit' value='Modificar' class='btn btn-willy text-center'>
+		                    	<label>Nom</label>
+								<input type='text' name='nom' value='$nom' class='form-control'>
+								<label>Cognoms</label>
+								<input type='text' name='cognoms' value='$cognoms' class='form-control'>
+								<label>Data naixament</label>
+								<input type='date' name='data' value='$data' class='form-control'>
+								<label>Alergies</label>
+								<input type='text' name='alergies' value='$alergies' class='form-control'>
+								<label>Trastorns</label>
+								<input type='text' name='trastorns' value='$trastorns' class='form-control'>
+								<label>Malalties</label>
+								<input type='text' name='malalties' value='$malalties' class='form-control'>
+								<input type='hidden' name='id' value='$id'> 
+								<input type='submit' value='Modificar' class='btn btn-willy text-center'>
 							</div>
 						</div> 
 					";
