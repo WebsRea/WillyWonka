@@ -57,14 +57,14 @@ function modStock1(stonen_id,quantitat){
 
 
 function modStock(stonen_id,quantitat){
-		alert("nbifusdgusdfiod");
+		// alert("nbifusdgusdfiod");
 	var url = "ajax/ajaxEditarStonen.php?stonen_id="+stonen_id+"&quantitat="+quantitat; // El script a dónde se realizará la petición.
 	$.ajax({
 		type: "POST",
 		url: url, // Adjuntar los campos del formulario enviado.
 		success: function(data)
 		{
-			alert("estoy dentro");
+			// alert("estoy dentro");
 			carregar();
 		}
 	});

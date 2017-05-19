@@ -10,7 +10,8 @@ include('../conexio.php');
 
 	$cla_id = mysqli_insert_id($conexio);
 	
-	$sql = "UPDATE `tbl_usuari` SET `cla_id` = '$cla_id' WHERE `tbl_usuari`.`usu_id` = $usu_id;";
+	$sql = "UPDATE `tbl_usuari` SET `cla_id` = '$cla_id' WHERE `tbl_usuari`.`usu_id` = ".$mestreId.";";
+	// echo "$sql";
 	mysqli_query($conexio, $sql);
 	header('Location:../gestioClasses.php');
  ?>

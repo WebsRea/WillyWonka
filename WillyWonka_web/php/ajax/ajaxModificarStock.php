@@ -6,6 +6,7 @@
 	if (mysqli_num_rows($resultat) != 0 ) {
 		while ($usu = mysqli_fetch_array($resultat)) {
 			$cla_id = $usu['cla_id'];
+			// echo "$cla_id";
 		}
 	}
 
@@ -36,7 +37,7 @@
 						case 'alerta':
 							$radioStocks = "
 								<input type='radio' name='$stonen_id' value='ple' onclick='modStock(".$stonen_id.",\"ple\")'> ple<br>
-								<input type='radio' name='$stonen_id' value='alerta' onclick='modStock(".$stonen_id.",\"alerta\")' checked> alert<br>
+								<input type='radio' name='$stonen_id' value='alerta' onclick='modStock(".$stonen_id.",\"alerta\")' checked> alerta<br>
 								<input type='radio' name='$stonen_id' value='escola' onclick='modStock(".$stonen_id.",\"escola\")'>escola<br> 
 							";
 							break;
@@ -44,7 +45,7 @@
 						case 'escola':
 							$radioStocks = "
 								<input type='radio' name='$stonen_id' value='ple' onclick='modStock(".$stonen_id.",\"ple\")'> ple<br>
-								<input type='radio' name='$stonen_id' value='alerta' onclick='modStock(".$stonen_id.",\"alerta\")'> alert<br>
+								<input type='radio' name='$stonen_id' value='alerta' onclick='modStock(".$stonen_id.",\"alerta\")'> alerta<br>
 								<input type='radio' name='$stonen_id' value='escola' onclick='modStock(".$stonen_id.",\"escola\")' checked>escola<br> 
 							";
 							break;
