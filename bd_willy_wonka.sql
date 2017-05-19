@@ -386,8 +386,7 @@ ALTER TABLE `tbl_esdeveniments`
 ALTER TABLE `tbl_frase`
   ADD CONSTRAINT `FK_usu_idfrase` FOREIGN KEY (`usu_id`) REFERENCES `tbl_usuari` (`usu_id`);
 
-ALTER TABLE `tbl_document`
-  ADD CONSTRAINT `FK_usu_iddocument` FOREIGN KEY (`usu_id`) REFERENCES `tbl_usuari` (`usu_id`);
+
 
 
 
