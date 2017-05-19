@@ -11,7 +11,7 @@ switch ($decisio) {
 			<p>Recorda que per introduir un nen nou has d'haver introduit primer els seus familiars.</p>
 			</div>
 			
-			<form action='procs/afegirNen.proc.php'>
+			<form action='procs/afegirNenStock.proc.php'>
 				<div class='col-md-4'>
 				<label>Primer Familiar</label>
 				<select name='usu_id1'>
