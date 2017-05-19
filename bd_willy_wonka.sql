@@ -30,7 +30,8 @@ USE bd_willy_wonka;
 
 CREATE TABLE `tbl_activitats` (
   `act_id` int(11) NOT NULL,
-  `act_data` date NOT NULL,
+  `act_data_ini` date NOT NULL,
+  `act_data_fi` date NOT NULL,
   `act_titol` varchar(100) NOT NULL,
   `act_text` text NOT NULL,
   `cla_id` int(11) NOT NULL
@@ -57,8 +58,7 @@ CREATE TABLE `tbl_document` (
   `doc_id` int(11) NOT NULL,
   `doc_tipus` enum('circular','menu','documentacio_inicial') NOT NULL,
   `doc_nom` varchar(500) NOT NULL,
-  `doc_ruta` varchar(500) NOT NULL,
-  `usu_id` int(11) NOT NULL
+  `doc_ruta` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 -- --------------------------------------------------------
 --
@@ -103,7 +103,8 @@ CREATE TABLE `tbl_nen` (
   `nen_malaltia` varchar(500) NOT NULL,
   `nen_foto` varchar(500) NOT NULL,
   `fam_id` int(11) NOT NULL,
-  `obs_id` int(11) NULL
+  `obs_id` int(11) NULL,
+  `cla_id` int(11) NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
