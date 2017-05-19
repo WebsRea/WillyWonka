@@ -50,7 +50,7 @@
                     <a href="#" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Esdeveniments</a>
                     <a href="" class="btn btn-willy btn-lg" >
-                    <img src="../img/001-chocolate.png"></img> Contacte</a>
+                    <img src="../img/001-chocolate.png"></img> Documents</a>
                     <a href="#" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Contacte</a>
                 </div>
