@@ -20,6 +20,6 @@ if (mysqli_num_rows($resultat) != 0 ) {
 	}
 	echo "</table>";
 }else{
-	echo "No hi han dades :'(";
+	echo "No hi han dades <img src='../img/icon/001-sad.png'>";
 }
  ?>
