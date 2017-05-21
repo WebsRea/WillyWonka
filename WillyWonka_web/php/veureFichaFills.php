@@ -20,7 +20,7 @@ $sql = "SELECT * FROM tbl_nen where fam_id = $fam_id";
 $resultat = mysqli_query($conexio, $sql);
 if (mysqli_num_rows($resultat) != 0 ) {
 	while ($nen = mysqli_fetch_array($resultat)) {
-		echo "
+		echo " <div class='col-md-4'>
 			<br><img src='../img/personas.png'>";
 		echo "<br><b>Nom: </b>" . $nen['nen_nom'] . " " . $nen['nen_cognoms'];
 		echo "<br><b>Data naixement: </b>" . $nen['nen_data_naixement'];

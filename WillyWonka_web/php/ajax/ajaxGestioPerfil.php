@@ -8,7 +8,7 @@ switch ($decisio) {
 		echo "
 			<h2 class='h2admin'>AFEGIR UN NOU INFANT</h2>
 			<div class='jumbotron frase'>
-			<p>Recorda que per introduir un nen nou has d'haver introduit primer els seus familiars.</p>
+			<p>Recorda que per introduir un nen nou has d'haver-hi introduït primer els seus familiars.</p>
 			</div>
 			
 			<form action='procs/afegirNenStock.proc.php'>
@@ -64,7 +64,7 @@ switch ($decisio) {
 	case 'afegirTutor':
 		echo "<h2 class='h2admin'>AFEGIR UN NOU FAMILIAR</h2>
 			<div class='jumbotron frase'>
-				<p>El correu servirá per  fer comunicacions internes amb el familiar.</p>
+				<p>El correu servirà per  fer les comunicacions internes amb el familiar.</p>
 			</div>
 			<div class='col-md-12 margen_arriba'>
 				<form action='procs/afegirTutor.proc.php'>
@@ -85,7 +85,7 @@ switch ($decisio) {
 	case 'afegirMestre':
 		echo "<h2 class='h2admin'>AFEGIR UN NOU MESTRE</h2>
 			<div class='jumbotron frase'>
-				<p>El correu servirá per  fer comunicacions internes amb el mestre.</p>
+				<p>El correu servirà per fer les comunicacions internes amb el mestre.</p>
 			</div>
 			<div class='col-md-12 margen_arriba'>
 				<form action='procs/afegirMestre.proc.php'>

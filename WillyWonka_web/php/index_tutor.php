@@ -73,7 +73,7 @@
         <div class="container pfam">
             <h2 class="h2fam"> Els meus nens</h2>
     
-            <div class="col-md-4">
+           
                 <?php include "veureFichaFills.php";?>
             
         </div>
