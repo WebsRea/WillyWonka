@@ -15,5 +15,5 @@ $hoy = date("Y-m-d");
 
 $query = "INSERT INTO `tbl_frase` (`frase_text`, `frase_data`, `usu_id`) VALUES ('$frase_text', '$hoy', '$usu_id')";
 $resultados=mysqli_query($conexio,$query);
-//header('Location:../admin.php');
+header('Location:../index_admin.php');
  ?>

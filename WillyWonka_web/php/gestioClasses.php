@@ -98,7 +98,7 @@
                 <h4 class="h4inicio">
                 <div class="row">
                 <?php 
-                echo "Perfecte! modifiquem alguns perfils " . $_SESSION['usu_nom'] . " o prefereixes  <a href='../index.php'><i class='fa fa-power-off' aria-hidden='true'> Sortir</i></a> ?<br>";
+                echo "Perfecte! modifiquem alguna classe " . $_SESSION['usu_nom'] . " o prefereixes  <a href='../index.php'><i class='fa fa-power-off' aria-hidden='true'> Sortir</i></a> ?<br>";
                 ?>
                 </div>
                 </h4>
@@ -120,16 +120,24 @@
 			$resultat=mysqli_query($conexio, $sql);
 				// echo "foisndfuignfdiuog";
 			if (mysqli_num_rows($resultat) != 0 ) {
-				echo "<h4>Selecciona una classe a editar</h4><br><table><tr>";
+				echo "<h2 class='h2fam'>LES NOSTRES CLASSES<br><small></h2>
+              <br>";
 				while ($classe = mysqli_fetch_array($resultat)) {
 					$id = $classe['cla_id'];
 					$nom = $classe['cla_nom'];
-					echo "<td><a href='editarClasse.php?id=$id'>    $nom        </a></td>";
+          $foto_classe = $classe['cla_foto'];
+
+					echo "
+                <div class='col-md-4'>
+                <img src='../img/icon/$foto_classe' class='imagen'>
+                <br><br><a  class='h2fam' href='editarClasse.php?id=$id'> $nom  </a>
+                </div>
+                ";
 					}
-				echo "</tr></table>";
+				echo "";
 			} else {
 				//header('location:../../index.php?err=1');
-				echo "No hi han classes disponibles :(";
+				echo "<img src='../img/icon/cloud-computing.png'>No hi han classes disponibles :(";
 			}                      
 		?>
 <a href="#" onclick="veureAfegirClasse()">Afegir una classe</a><br><br>
