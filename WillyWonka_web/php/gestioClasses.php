@@ -111,6 +111,8 @@
     <div class="jumbotron frase">
 
     	<div class="container padmin">
+        <div class="row">
+
     	<?php 
 
     	include('conexio.php');
@@ -120,7 +122,7 @@
 			$resultat=mysqli_query($conexio, $sql);
 				// echo "foisndfuignfdiuog";
 			if (mysqli_num_rows($resultat) != 0 ) {
-				echo "<h2 class='h2fam'>LES NOSTRES CLASSES<br><small></h2>
+				echo "<h2 class='h2fam'>LES NOSTRES CLASSES<br><small class='h2fam'>Clica al nom de la classe per obtenir més informació</small></h2>
               <br>";
 				while ($classe = mysqli_fetch_array($resultat)) {
 					$id = $classe['cla_id'];
@@ -129,7 +131,7 @@
 
 					echo "
                 <div class='col-md-4'>
-                <img src='../img/icon/$foto_classe' class='imagen'>
+                <img src='../img/icon/$foto_classe'>
                 <br><br><a  class='h2fam' href='editarClasse.php?id=$id'> $nom  </a>
                 </div>
                 ";
@@ -137,14 +139,26 @@
 				echo "";
 			} else {
 				//header('location:../../index.php?err=1');
-				echo "<img src='../img/icon/cloud-computing.png'>No hi han classes disponibles :(";
+				echo "<img src='../img/icon/006-la-computacion-en-nube-1.png'> No hi han classes disponibles <img src='../img/icon/001-sad.png'>";
 			}                      
 		?>
-<a href="#" onclick="veureAfegirClasse()">Afegir una classe</a><br><br>
-<div id="afegirClasse"></div>
+        </div>
+
     		
 		</div> 
 	</div>
+  <div class="container">
+  <div class="col-md-4"></div>
+  <div class="col-md-4 psom">
+
+      <a href="#" onclick="veureAfegirClasse()" class="psom" ><b>Afegir una classe</b></a><br><br>
+  </div>
+
+      <div id="afegirClasse" class="psom">
+        
+      </div>
+   </div>
+  </div>
     
 </body>
 <footer class="footer">
