@@ -15,7 +15,7 @@ if (mysqli_num_rows($resultat) != 0){
 		echo "<h1 class='h1som'>" .$fra['frase_text']. "</h1>";
 	}
 }else{
-	echo "<h1 class='h1som'>No n'hi ha cap frase disponible</h1>";
+	echo "<h1 class='h1som'><img src='../img/icon/001-sad.png'>No n'hi ha cap frase disponible</h1>";
 }
 
 

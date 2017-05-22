@@ -13,7 +13,7 @@ $usu_id = $_SESSION['usu_id'];
         </div>
         <div class="col-md-3"></div>
         <div class="col-md-3">  
-            <input type="submit" class="btn btn-willy text-center" name="Enviar">
+            <input type="submit" class="btn btn-willy text-center btn-lg" name="Enviar">
             <br>
             <br>
         </div> 
