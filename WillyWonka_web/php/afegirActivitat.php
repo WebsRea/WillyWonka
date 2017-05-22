@@ -78,6 +78,7 @@
 		    <div class="col-md-4 padmin"> 
 		    	<form name="anadirEvento" action="procs/afegirActivitat.proc.php">
 		    		<div class="form-group">
+		    		OJO AQUÍ FALTA FECHA INI FECHA FIN Y LA CLASE DE LA ACTIVIDAD
 						<lable>Nom de l'activitat:</lable>
 						<input type="textArea" name="act_titol" class="form-control">
 					</div>

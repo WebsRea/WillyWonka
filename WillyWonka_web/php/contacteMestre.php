@@ -50,9 +50,9 @@
                     <a href="" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Classes</a>
                     <a href="" class="btn btn-willy btn-lg">
-                    <img src="../img/001-chocolate.png"></img>Esdeveniments</a>
+                    <img src="../img/001-chocolate.png"></img>Activitats</a>
                     <a href="" class="btn btn-willy btn-lg" >
-                    <img src="../img/001-chocolate.png"></img> Documents</a>
+                    <img src="../img/001-chocolate.png"></img> Stock</a>
                     <a href="" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Contacte</a>
                 </div>
