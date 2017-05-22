@@ -13,7 +13,8 @@ $to = $mail_correu;
 $subject = $mail_asunto;
 $txt = $mail_missatge;
 $headers = "From: $usu_nom (no contestar)";
-$msg .= "Missatge de: $usu_nom (no contestar al correu.) \n " . $txt
+$msg .= "Missatge de: $usu_nom (no contestar al correu.) \n\n\n\n " . $txt;
 
 mail($to,$mail_asunto,$msg);
+header("Location: {$_SERVER["HTTP_REFERER"]}");
 ?>
