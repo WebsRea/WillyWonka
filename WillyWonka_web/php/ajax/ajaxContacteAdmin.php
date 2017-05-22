@@ -12,7 +12,7 @@ $resultat = mysqli_query($conexio, $sql);
 					echo "<option value='$correu'>$nom</option>";
 				}
 				echo "</select>";
-			}else{echo "No hi han mails!";}
+			}else{echo "<img src='../img/icon/001-sad.png'>No hi han mails!";}
 
 
  ?>

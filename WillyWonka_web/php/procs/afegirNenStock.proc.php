@@ -6,7 +6,7 @@
 
 	include('../conexio.php');
 
-					$sql = "SELECT * FROM `tbl_familia` WHERE (usu_id1 = '2' OR usu_id1 = '3') AND(usu_id2 = '2' OR usu_id2 = '3')";
+					$sql = "SELECT * FROM `tbl_familia` WHERE (usu_id1 = '$usu_id1' OR usu_id1 = 'usu_id2') AND(usu_id2 = 'usu_id2' OR usu_id2 = 'usu_id1')";
 					$resultats=mysqli_query($conexio, $sql);
 					if (mysqli_num_rows($resultats) == 0 ) {
 						$sqlInsertarFamilias = "INSERT INTO `tbl_familia` (`fam_id`, `usu_id1`, `usu_id2`, `fam_estat`) VALUES (NULL, '$usu_id1', '$usu_id2', 'actiu');";

@@ -30,7 +30,7 @@ if ($row = mysqli_fetch_array($results)){
    } while ($row = mysqli_fetch_array($results)); 
    echo "</table> \n"; 
 } else { 
-echo "¡ No se ha encontrado ningún registro !"; 
+echo "<img src='../img/icon/001-sad.png'> No hi ha cap registre!"; 
 } 
 ?> 
   </div>

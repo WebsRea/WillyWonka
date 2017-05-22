@@ -7,7 +7,7 @@ $usu_id = $_SESSION['usu_id'];
 
 include 'conexio.php';
 
-$sql="SELECT * FROM tbl_frase ORDER BY frase_data DESC LIMIT 1";
+$sql="SELECT * FROM tbl_frase ORDER BY frase_id DESC LIMIT 1";
 $resultat = mysqli_query($conexio, $sql);
 // echo "$sql";
 if (mysqli_num_rows($resultat) != 0){
