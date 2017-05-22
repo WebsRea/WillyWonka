@@ -59,7 +59,7 @@
                     <span class="sr-only">Alternar menu</span>
                     <img src="../img/001-chocolate.png"></img>               
                 </button>
-                <a href="#inicio"><img class="img-responsive" src="../img/LogoWW_SD.png" alt=""></a>
+                <a href="index_admin.php"><img class="img-responsive" src="../img/LogoWW_SD.png" alt=""></a>
             </div>
             <!-- Links del menu -->
             <div class="collapse navbar-collapse align-right" id="navbar1">
@@ -113,7 +113,7 @@
 				</div>
 				<div class="col-md-3"></div> 
                 <div class="col-md-3">  
-				<input type="submit" name="enviar" value="enviar" class="btn btn-willy text-center">
+				<input type="submit" name="enviar" value="enviar" class="btn btn-willy text-center btn-lg">
 				</div> 
 			</form>
 

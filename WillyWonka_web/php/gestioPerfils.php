@@ -224,9 +224,9 @@
                     <img src="../img/001-chocolate.png"></img>Classes</a>
                     <a href="afegirEsdeveniment.php" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Esdeveniments</a>
-                    <a href="#" class="btn btn-willy btn-lg" >
+                    <a href="subirArchivo.php" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Documents</a>
-                    <a href="#" class="btn btn-willy btn-lg" >
+                    <a href="contacteAdmin.php" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Contacte</a>
                 </div>
             </div>

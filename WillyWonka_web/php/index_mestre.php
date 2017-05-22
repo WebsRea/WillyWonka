@@ -43,7 +43,7 @@
             <!-- Links del menu -->
             <div class="collapse navbar-collapse align-right" id="navbar1">
                  <div class="nav navbar-nav botonesnav">
-                    <a href="index_mestre.php" class="btn btn-willy btn-lg">
+                    <a href="veureFichesNens.php" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Perfils </a>
                     <a href="#" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Clase</a>
@@ -51,7 +51,7 @@
                     <img src="../img/001-chocolate.png"></img>Activitats</a>
                     <a href="#" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Stock</a>
-                    <a href="#" class="btn btn-willy btn-lg" >
+                    <a href="contacteMestre.php" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Contacte</a>
                 </div>
             </div>
