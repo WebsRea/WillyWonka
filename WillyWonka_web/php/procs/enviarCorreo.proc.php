@@ -13,6 +13,7 @@ $to = $mail_correu;
 $subject = $mail_asunto;
 $txt = $mail_missatge;
 $headers = "From: $usu_nom (no contestar)";
+$msg .= "Missatge de: $usu_nom (no contestar al correu.) \n " . $txt
 
-mail($to,$subject,$txt,$headers);
+mail($to,$mail_asunto,$msg);
 ?>
