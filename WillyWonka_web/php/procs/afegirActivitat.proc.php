@@ -22,5 +22,5 @@ if (mysqli_num_rows($results) != 0){
 }
 $query = "INSERT INTO `tbl_activitats` (`act_titol`, `act_data`, `act_text`, `cla_id`) VALUES ('$act_titol', '$act_data', '$act_text', '$result')";
 $resultados=mysqli_query($conexio,$query);
-//header('Location:../mestre.php');
+header('Location:../index_mestre.php');
  ?>

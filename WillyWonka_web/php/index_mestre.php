@@ -46,8 +46,8 @@
                     <a href="veureFichesNens.php" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Perfils </a>
                     <a href="#" class="btn btn-willy btn-lg">
-                    <img src="../img/001-chocolate.png"></img>Clase</a>
-                    <a href="#" class="btn btn-willy btn-lg">
+                    <img src="../img/001-chocolate.png"></img>Classe</a>
+                    <a href="afegirActivitat.php" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Activitats</a>
                     <a href="#" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Stock</a>

@@ -74,7 +74,7 @@
 						<lable>Dia del final de l'esdeveniment:</lable>
 						<input type="date" name="esd_data_fin" class="form-control"	>
 						</div>
-						<input type="submit" name="enviar" class="btn btn-willy">
+						<input type="submit" name="enviar" class="btn btn-willy btn-lg">
 					</form>
 				</div>
 		</div>
