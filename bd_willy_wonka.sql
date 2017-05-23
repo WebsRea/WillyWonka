@@ -204,6 +204,11 @@ INSERT INTO `tbl_stock` (`sto_id`, `sto_nom`)
 -- Índices para tablas volcadas
 --
 
+INSERT INTO `tbl_esdeveniments` (`esd_id`, `esd_titol`, `esd_data_ini`, `esd_data_fin`, `esd_text`, `usu_id`) VALUES (NULL, 'Dia del xocolata', '2017-10-02', '2017-10-06', 'Aquests dies celebrem el dia de la xocolata.', '1'), (NULL, 'Castanyera', '2017-10-30', '2017-11-03', 'Celebrem la castanyada a la nostra llar.', '1'), (NULL, 'Dia de Steve Irwin', '2017-11-27', '2017-12-01', 'La seva preocupació pels animals ens inspira aquesta setmana.', '1'), (NULL, 'Nadal', '2017-12-11', '2017-12-15', 'Celebrem el Nadal a la Llar.', '1'), (NULL, 'Winter Light Festival', '2018-01-15', '2018-01-19', 'Aquesta setmana omplim de llum la llar.', '1'), (NULL, 'Carnestoltes', '2018-02-05', '2018-02-09', 'Carnestoltes a la LLar.', '1'), (NULL, 'Holi Festiva Junior', '2018-03-19', '2018-03-23', 'Ens agraden els colors!.', '1'), (NULL, 'Sant Jordi', '2018-04-16', '2018-04-20', 'Llibre i roses, històries i contes.', '1'), (NULL, 'Dia de les cultures del món', '2018-05-21', '2018-05-25', 'Celebrem la setmana de les cultures.', '1'), (NULL, 'Festa de estiu' , '2018-06-18', '2018-06-21', 'Celebracions per donar la benvinguda a aquesta estació.', '1');
+
+
+
+
 --
 -- Indices de la tabla `tbl_activitats`
 --
