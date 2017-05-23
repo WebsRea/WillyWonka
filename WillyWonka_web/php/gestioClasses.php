@@ -131,7 +131,7 @@
 
 					echo "
                 <div class='col-md-4'>
-                <img src='../img/icon/$foto_classe'>
+                <img src='../img/pack/$foto_classe'>
                 <br><br><a  class='h2fam' href='editarClasse.php?id=$id'> $nom  </a>
                 </div>
                 ";
@@ -154,7 +154,7 @@
       <a href="#" onclick="veureAfegirClasse()" class="psom" ><b>Afegir una classe</b></a><br><br>
   </div>
 
-      <div id="afegirClasse" class="psom">
+      <div id="afegirClasse" >
         
       </div>
    </div>

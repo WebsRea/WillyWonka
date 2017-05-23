@@ -85,7 +85,7 @@
 
 			<div class='jumbotron frase'>
 
-        		<h2 class='h2fam'><img src='../img/icon/$foto_classe'>$nomClasse</h2>
+        		<h2 class='h2fam'><img src='../img/pack/$foto_classe'>$nomClasse</h2>
         
     		</div>
     		<div class='container padmin'>

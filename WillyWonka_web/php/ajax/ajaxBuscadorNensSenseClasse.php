@@ -5,7 +5,7 @@ include '../conexio.php';
 	echo "
 	<br><h4>LListat de nens que encara no tenen asignada una classe:</h4>";
 	if (mysqli_num_rows($resultat) != 0 ) {
-		echo "<table class='table table-hover'><tr><td>Nom</td><td>Cognoms</td><td>Acció</td></tr>";
+		echo "<table class='table table-hover'><tr class='datos_tabla'><td>Nom</td><td>Cognoms</td><td>Acció</td></tr>";
 		while ($nen = mysqli_fetch_array($resultat)) {
 			echo "<tr><td>".$nen['nen_nom']."</td><td>".$nen['nen_cognoms']."</td><td><a href='#' onclick='afegirEliminarNen(".$nen['nen_id'].")'>Afegir</td></tr>";
 		}
