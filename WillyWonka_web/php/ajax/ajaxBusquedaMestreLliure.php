@@ -20,7 +20,7 @@ if ($busqueda != "") {
 			$nom = $usu['usu_nom'] . " " . $usu['usu_cognoms'];
 			echo "<option value='$id' name='usu_id'>$nom</option>";
 		}
-	}else{echo "No he trobat cap mestre amb aquesta recerca<img src='../img/icon/001-sad.png'>";}
+	}else{echo "No hi ha cap mestre disponible en aquesta recerca<img src='../img/icon/001-sad.png'>";}
 		echo "</select>";
 	// echo "$sql";
 	
@@ -37,7 +37,7 @@ if ($busqueda != "") {
 
 			<option value='$id' name='usu_id'>$nom</option>";
 		}
-	}else{echo "No he trobat cap mestre amb aquesta recerca<img src='../img/icon/001-sad.png'>";}
+	}else{echo "No hi ha cap mestre disponible en aquesta recerca<img src='../img/icon/001-sad.png'>";}
 		echo "</select>";
 	// echo "$sql";
 	

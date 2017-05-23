@@ -8,7 +8,7 @@ echo '
 		</div>
 		<div class="row">
 			<div class="form-group">
-				<label class="psom">Selecciona mestre: <small>Utilitza el desplegable per trobar de forma ràpida un mestre</label>
+					<label class="psom">Selecciona mestre: <small>Utilitza el desplegable per trobar de forma ràpida un mestre</label>
 				<form action="procs/afegirClasse.proc.php"  class="psom">
 						<div id="resultadosBusqueda">
 							<select name="mestreId"></select>

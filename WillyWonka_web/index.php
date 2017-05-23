@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="cat">
 <head>
-    <title>WilyWonka</title>
+    <title>WillyWonka</title>
     <meta charset="utf-8" charset="ISO-8859-1">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -9,6 +9,7 @@
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/food.png" />
 </head>
 <body id="inicio">
 
@@ -129,7 +130,7 @@
     </div>
     <div class="jumbotron frase" id="amiga" >
         <div class="container">
-            <h1 class="h1som">Aquí les colaboracións</h1>
+            <h1 class="h1som">Aquí les col·laboracions</h1>
             <div class="col-md-9">
             <p class="psom">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
