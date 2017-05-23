@@ -47,6 +47,7 @@ CREATE TABLE `tbl_classe` (
   `cla_id` int(11) NOT NULL,
   `cla_nom` varchar(100) NOT NULL,
   `cla_curs` int(1) NOT NULL
+  `cla_foto` varchar(20) NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -195,6 +196,11 @@ INSERT INTO `tbl_usuari` (`usu_id`, `usu_nom`, `usu_cognoms`, `usu_mail`, `usu_p
 (1, 'Roger', 'Fusté Arroyo', 'rfuste18@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', '1', 'admin', 'no', NULL);
 
 --
+--
+-- Volcado de datos para la tabla `tbl_stock`
+--
+INSERT INTO `tbl_stock` (`sto_id`, `sto_nom`) 
+  VALUES (NULL, 'Bolquers'), (NULL, 'Tovalloletes'), (NULL, 'Crema'), (NULL, 'Mudes'), (NULL, 'Pitets'), (NULL, 'Xumets');
 -- Índices para tablas volcadas
 --
 
