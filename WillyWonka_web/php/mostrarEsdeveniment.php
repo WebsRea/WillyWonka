@@ -19,8 +19,10 @@ include 'conexio.php';
 
 
 <?php 
-
 $sql="SELECT * FROM tbl_esdeveniments WHERE now() BETWEEN esd_data_ini AND esd_data_fin OR esd_data_ini <= NOW() + INTERVAL 1 WEEK AND esd_data_fin >= NOW() + INTERVAL 1 WEEK ORDER BY esd_data_ini DESC"; 
+if ($_SESSION['usu_tipus'] = 'admin') {
+	$sql = "SELECT * FROM tbl_esdeveniments ORDER BY esd_data_ini DESC";
+}
 $results=mysqli_query($conexio,$sql);
 if ($row = mysqli_fetch_array($results)){ 
    echo "<table border = '1'> \n"; 
