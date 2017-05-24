@@ -36,7 +36,7 @@ include 'conexio.php';
          echo "<table class='table-hover'> \n"; 
          echo "<tr class='datos_tabla padmin'><td>Titol</td><td>&nbsp;&nbsp;Descripció</td><td>&nbsp;&nbsp;Inici</td><td>&nbsp;&nbsp;Fi</td></tr> \n"; 
          do { 
-            echo "<tr class='info'><td>".$row["esd_titol"]."</td><td>&nbsp;&nbsp;".$row["esd_text"]."</td><td>&nbsp;&nbsp;".$row["esd_data_ini"]."</td><td>&nbsp;&nbsp;".$row["esd_data_fin"]."</td><td><a href='eliminarEsdeveniment.php?esd_id=".$row['esd_id']."''>eliminar</a></td></tr> \n"; 
+            echo "<tr class='info'><td>".$row["esd_titol"]."</td><td>&nbsp;&nbsp;".$row["esd_text"]."</td><td>&nbsp;&nbsp;".$row["esd_data_ini"]."</td><td>&nbsp;&nbsp;".$row["esd_data_fin"]."</td><td><a href='procs/eliminarEsdeveniment.proc.php?esd_id=".$row['esd_id']."''>eliminar</a></td></tr> \n"; 
          } while ($row = mysqli_fetch_array($results)); 
          echo "</table> \n"; 
       } else { 
