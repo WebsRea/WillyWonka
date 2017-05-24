@@ -74,17 +74,17 @@
       <div class="col-md-4"></div>
       <div class="col-md-4">
       <form action="procs/subirArchivo.proc.php" method="post" enctype="multipart/form-data"> 
-      	<b>Seleccioni que vol pujar:</b> 
+      	<b>Seleccioni el tipus d'arxiu:</b> 
       	<br> 
          <select name="tipus_arxiu">
             <option value="circular">Circular</option>
-            <option value="menu">Menú</option>
+            <option value="menu">Menu</option>
             <option value="documentacio_inicial">Documentació Inicial</option>
          </select> 
       	<br> 
-         <b>Seleccioni que vol pujar:</b> <br>
+         <b>Títol de l'archiu que vol pujar:</b> <br>
          <input type="text" name="doc_titol"><br>
-      	<b>Enviar un nuevo archivo: </b> 
+      	<b>Enviar un nou arxiu: </b> 
       	<br> 
       	<input type="file" name="fileToUpload" id="fileToUpload">
       	<br> 

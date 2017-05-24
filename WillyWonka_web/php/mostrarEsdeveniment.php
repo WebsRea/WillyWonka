@@ -25,10 +25,10 @@ if ($_SESSION['usu_tipus'] = 'admin') {
 }
 $results=mysqli_query($conexio,$sql);
 if ($row = mysqli_fetch_array($results)){ 
-   echo "<table border = '1'> \n"; 
-   echo "<tr><td>Titol</td><td>Descripció</td><td>Data Inicial</td><td>Data Final</td></tr> \n"; 
+   echo "<table class='table-hover'> \n"; 
+   echo "<tr class='datos_tabla padmin'><td>Titol</td><td>&nbsp;&nbsp;Descripció</td><td>&nbsp;&nbsp;Inici</td><td>&nbsp;&nbsp;Fi</td></tr> \n"; 
    do { 
-      echo "<tr><td>".$row["esd_titol"]."</td><td>".$row["esd_text"]."</td><td>".$row["esd_data_ini"]."</td><td>".$row["esd_data_fin"]."</td></tr> \n"; 
+      echo "<tr class='info'><td>".$row["esd_titol"]."</td><td>&nbsp;&nbsp;".$row["esd_text"]."</td><td>&nbsp;&nbsp;".$row["esd_data_ini"]."</td><td>&nbsp;&nbsp;".$row["esd_data_fin"]."</td></tr> \n"; 
    } while ($row = mysqli_fetch_array($results)); 
    echo "</table> \n"; 
 } else { 

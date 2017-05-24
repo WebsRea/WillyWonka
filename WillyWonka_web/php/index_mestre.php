@@ -74,6 +74,16 @@
         <p> <?php include "veureFrase.php";?></p>
         
     </div>
+    <div class="container">
+          <p> <?php include "mostrarEsdeveniment.php";?></p>
+
+    </div>
+
+    <div class="jumbotron frase">
+
+      
+        
+    </div>
 
     <div class="container">
         <div class="main">

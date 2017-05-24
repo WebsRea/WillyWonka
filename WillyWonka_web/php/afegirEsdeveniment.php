@@ -81,13 +81,14 @@
         
     </div>
 
-    <div class="container">
+    <div class="container psom">
     	<?php
 		  include "mostrarEsdeveniment.php";
 		?>
         
     </div>
-    
+    <br>
+    <br>
 </body>
 <footer class="footer">
   <?php
