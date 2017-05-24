@@ -2,7 +2,8 @@
 <?php 
 	if (isset($_SESSION['usu_tipus'])) {
 		if ($_SESSION['usu_tipus'] == 'mestre') {
-			$ini = date("Y-m-d", strtotime( date( "Y-m-d", strtotime( date("Y-m-d") ) ) . "+1 month" ) );
+
+	$ini = date("Y-m-d", strtotime( date( "Y-m-d", strtotime( date("Y-m-d") ) ) . "+1 month" ) );
 	// $ini = $any . "-" . $mesProx."-".$dia;
 	$fi = date("Y-m-d-");
 							echo "hasta aquí llega";
@@ -13,6 +14,7 @@
 		if (mysqli_num_rows($results) != 0){
 			while ($usu = mysqli_fetch_array($results)) {
 				$cla_id = $usu['cla_id'];
+				if (isset($cla_id)) {
 				$sqlB="SELECT * FROM tbl_activitats WHERE now() BETWEEN act_data_ini AND act_data_fi OR act_data_ini <= NOW() + INTERVAL 1 WEEK AND act_data_fi >= NOW() + INTERVAL 1 WEEK AND cla_id = $cla_id ORDER BY act_data_ini DESC"; 
 					// $sql="SELECT * FROM tbl_activitats WHERE now() BETWEEN act_data_ini AND act_data_fi OR act_data_ini <= (NOW() + INTERVAL 1 WEEK) AND act_data_fi >= (NOW() + INTERVAL 1 WEEK) AND cla_id = 1 ORDER BY act_data_ini DESC"; 
 					
@@ -27,6 +29,9 @@
 					   echo "</table> \n"; 
 					} else { 
 					echo "<img src='../img/icon/001-sad.png'> No hi ha cap registre!"; 
+					} 
+				}else { 
+					echo "<img src='../img/icon/001-sad.png'> Aquest usuari no te cap classe asignada!"; 
 					} 
 				}
 			}
