@@ -9,7 +9,7 @@ if (mysqli_num_rows($resultat) != 0 ) {
 		$idClasse = $usu['cla_id'];
 	}
 }
-
+if (isset($idClasse)) {
 $sql = "SELECT * FROM tbl_nen WHERE (nen_nom LIKE '%$busqueda%' OR nen_cognoms LIKE '%$busqueda%') AND cla_id = $idClasse";
 $resultat = mysqli_query($conexio, $sql);
 if (mysqli_num_rows($resultat) != 0 ) {
@@ -21,5 +21,9 @@ if (mysqli_num_rows($resultat) != 0 ) {
 	echo "</table>";
 }else{
 	echo "No hi han dades <img src='../img/icon/001-sad.png'>";
+}
+	
+}else{
+	echo "No hi ha nens assignats a aquesta classe. <img src='../img/icon/001-sad.png'>";
 }
  ?>
