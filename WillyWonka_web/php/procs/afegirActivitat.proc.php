@@ -1,12 +1,6 @@
 <?php session_start();
 extract($_REQUEST);
 
-//SELECT * FROM tbl_activitats INNER JOIN tbl_usuari ON tbl_activitats. cla_id WHERE tbl_usuari. cla_id
-
-//SELECT tbl_activitats.cla_id FROM tbl_activitats INNER JOIN tbl_usuari ON tbl_activitats.cla_id = tbl_usuari.cla_id
-
-//SELECT tbl_usuari.cla_id FROM tbl_usuari INNER JOIN tbl_activitats ON tbl_usuari.cla_id = tbl_activitats.cla_id
-
 $usu_id = $_SESSION['usu_id'];
 echo "$usu_id";
 include '../conexio.php';
