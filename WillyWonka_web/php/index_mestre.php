@@ -74,7 +74,7 @@
         <p> <?php include "veureFrase.php";?></p>
         
     </div>
-    <div class="container">
+    <div class="container psom">
           <p> <?php include "mostrarEsdeveniment.php";?></p>
 
     </div>
