@@ -6,7 +6,7 @@
 	$ini = date("Y-m-d", strtotime( date( "Y-m-d", strtotime( date("Y-m-d") ) ) . "+1 month" ) );
 	// $ini = $any . "-" . $mesProx."-".$dia;
 	$fi = date("Y-m-d-");
-							echo "hasta aquí llega";
+							//echo "hasta aquí llega";
 	$usu_id = $_SESSION['usu_id'];
 	$sql="SELECT * FROM tbl_usuari where usu_id = $usu_id";
 								
