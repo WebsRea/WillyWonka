@@ -9,7 +9,8 @@
 			// echo "$cla_id";
 		}
 	}
-
+	if (isset($cla_id)) {
+		
 	$sqlNens = "SELECT * FROM tbl_nen WHERE cla_id = $cla_id";
 	$resultat = mysqli_query($conexio, $sqlNens);
 	if (mysqli_num_rows($resultat) != 0 ) {
@@ -61,5 +62,10 @@
 			}
 		}
 			echo "</table><div id='oculto'>";
+	}else{
+		echo "No hi ha nens.";
+	}
+	}else{
+		echo "No hi ha classe assignada a aquest usuari.";
 	}
  ?>
