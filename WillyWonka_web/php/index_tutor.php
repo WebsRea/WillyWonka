@@ -21,8 +21,7 @@
         } else {
             header('location:../../index.php?err=1');
         }                      
-    ?>
-    <?php
+    
         include "includes_admin/head.php";
 
     ?>
