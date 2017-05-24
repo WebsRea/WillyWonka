@@ -46,7 +46,7 @@ CREATE TABLE `tbl_activitats` (
 CREATE TABLE `tbl_classe` (
   `cla_id` int(11) NOT NULL,
   `cla_nom` varchar(100) NOT NULL,
-  `cla_curs` int(1) NOT NULL
+  `cla_curs` int(1) NOT NULL,
   `cla_foto` varchar(20) NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -187,24 +187,6 @@ CREATE TABLE `tbl_frase` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-
---
--- Volcado de datos para la tabla `tbl_usuari`
---
-
-INSERT INTO `tbl_usuari` (`usu_id`, `usu_nom`, `usu_cognoms`, `usu_mail`, `usu_pass`, `usu_estat`, `usu_tipus`, `mes_id`, `cla_id`) VALUES
-(1, 'Roger', 'Fusté Arroyo', 'rfuste18@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', '1', 'admin', 'no', NULL);
-
---
---
--- Volcado de datos para la tabla `tbl_stock`
---
-INSERT INTO `tbl_stock` (`sto_id`, `sto_nom`) 
-  VALUES (NULL, 'Bolquers'), (NULL, 'Tovalloletes'), (NULL, 'Crema'), (NULL, 'Mudes'), (NULL, 'Pitets'), (NULL, 'Xumets');
--- Índices para tablas volcadas
---
-
-INSERT INTO `tbl_esdeveniments` (`esd_id`, `esd_titol`, `esd_data_ini`, `esd_data_fin`, `esd_text`, `usu_id`) VALUES (NULL, 'Dia del xocolata', '2017-10-02', '2017-10-06', 'Aquests dies celebrem el dia de la xocolata.', '1'), (NULL, 'Castanyera', '2017-10-30', '2017-11-03', 'Celebrem la castanyada a la nostra llar.', '1'), (NULL, 'Dia de Steve Irwin', '2017-11-27', '2017-12-01', 'La seva preocupació pels animals ens inspira aquesta setmana.', '1'), (NULL, 'Nadal', '2017-12-11', '2017-12-15', 'Celebrem el Nadal a la Llar.', '1'), (NULL, 'Winter Light Festival', '2018-01-15', '2018-01-19', 'Aquesta setmana omplim de llum la llar.', '1'), (NULL, 'Carnestoltes', '2018-02-05', '2018-02-09', 'Carnestoltes a la LLar.', '1'), (NULL, 'Holi Festiva Junior', '2018-03-19', '2018-03-23', 'Ens agraden els colors!.', '1'), (NULL, 'Sant Jordi', '2018-04-16', '2018-04-20', 'Llibre i roses, històries i contes.', '1'), (NULL, 'Dia de les cultures del món', '2018-05-21', '2018-05-25', 'Celebrem la setmana de les cultures.', '1'), (NULL, 'Festa de estiu' , '2018-06-18', '2018-06-21', 'Celebracions per donar la benvinguda a aquesta estació.', '1');
 
 
 
@@ -396,6 +378,28 @@ ALTER TABLE `tbl_esdeveniments`
 --
 ALTER TABLE `tbl_frase`
   ADD CONSTRAINT `FK_usu_idfrase` FOREIGN KEY (`usu_id`) REFERENCES `tbl_usuari` (`usu_id`);
+
+
+
+--
+-- Volcado de datos para la tabla `tbl_usuari`
+--
+
+INSERT INTO `tbl_usuari` (`usu_id`, `usu_nom`, `usu_cognoms`, `usu_mail`, `usu_pass`, `usu_estat`, `usu_tipus`, `mes_id`, `cla_id`) VALUES
+(1, 'Roger', 'Fusté Arroyo', 'rfuste18@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', '1', 'admin', 'no', NULL);
+
+--
+--
+-- Volcado de datos para la tabla `tbl_stock`
+--
+INSERT INTO `tbl_stock` (`sto_id`, `sto_nom`) 
+  VALUES (NULL, 'Bolquers'), (NULL, 'Tovalloletes'), (NULL, 'Crema'), (NULL, 'Mudes'), (NULL, 'Pitets'), (NULL, 'Xumets');
+-- Índices para tablas volcadas
+--
+
+INSERT INTO `tbl_esdeveniments` (`esd_titol`, `esd_data_ini`, `esd_data_fin`, `esd_text`, `usu_id`) VALUES ('Dia del xocolata', '2017-10-02', '2017-10-06', 'Aquests dies celebrem el dia de la xocolata.', '1'), ('Castanyera', '2017-10-30', '2017-11-03', 'Celebrem la castanyada a la nostra llar.', '1'), ('Dia de Steve Irwin', '2017-11-27', '2017-12-01', 'La seva preocupació pels animals ens inspira aquesta setmana.', '1'), ('Nadal', '2017-12-11', '2017-12-15', 'Celebrem el Nadal a la Llar.', '1'), ('Winter Light Festival', '2018-01-15', '2018-01-19', 'Aquesta setmana omplim de llum la llar.', '1'), ('Carnestoltes', '2018-02-05', '2018-02-09', 'Carnestoltes a la LLar.', '1'), ('Holi Festiva Junior', '2018-03-19', '2018-03-23', 'Ens agraden els colors!.', '1'), ('Sant Jordi', '2018-04-16', '2018-04-20', 'Llibre i roses, històries i contes.', '1'), ('Dia de les cultures del món', '2018-05-21', '2018-05-25', 'Celebrem la setmana de les cultures.', '1'), ('Festa de estiu' , '2018-06-18', '2018-06-21', 'Celebracions per donar la benvinguda a aquesta estació.', '1');
+
+
 
 
 
