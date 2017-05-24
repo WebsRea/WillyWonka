@@ -168,7 +168,7 @@
 		        <label for="message">Missatge</label>
 		            <textarea rows="5" class="form-control" placeholder="El vostre correu" name="mail_missatge" required data-validation-required-message="Per favor, introdueixi el seu missatge."></textarea>  
 		                <br>
-		        <button type="submit" class="btn btn-willy text-center btn-lg">Envia</button>
+		        <button type="submit" class="btn btn-willy text-center btn-lg">Enviar</button>
 		                       
 		    </form>
 </div>		    

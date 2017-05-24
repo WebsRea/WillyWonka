@@ -28,7 +28,7 @@
                     <img src="../img/001-chocolate.png"></img>Activitats</a>
                     <a href="veureMenus.php" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Menu del dia</a>
-                    <a href="#" class="btn btn-willy btn-lg" >
+                    <a href="formContactoFam.php" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Contacte</a>
                     <a href="#" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Suro</a>
@@ -58,10 +58,12 @@
 	echo "<h2 class='h2fam'>Aquest és el <img src='../img/icon/menu.png'></img> de la setmana</h2>";
 	if (mysqli_num_rows($resultat) != 0 ) {
 		while ($doc = mysqli_fetch_array($resultat)) {
-			echo $doc['doc_nom'] . " ---- " . $doc['doc_ruta'] . "<br>";
+			//echo $doc['doc_nom'] . " ---- " . $doc['doc_ruta'] . "<br>";
 			$ruta = $doc['doc_ruta'];
 			$ruta = substr($ruta, 3); 
-			echo "<img src='$ruta'>";
+			echo "<img rc='$ruta'  class='img-responsive img-rounded'> ";
+            //echo "<img src='arxius/menu/menu2.jpeg' class='img-responsive img-rounded'> ";
+            //mac edition no se ve el tema de los archivos en mac
 		}
 	}
 
@@ -70,22 +72,10 @@
 		</div> 
 	</div>
 	<div class="container padmin">
-		
+
 	</div>
 
-	<div class="jumbotron frase">
-	</div>
-	<div class="container padmin">
-		
-	</div>
-
-	<div class="jumbotron frase">
-	</div>
-        
-    
-
-   
-    
+	    
 </body>
 <footer class="footer">
   <?php

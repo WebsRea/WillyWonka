@@ -49,9 +49,9 @@
                     <img src="../img/001-chocolate.png"></img>Activitats</a>
                     <a href="veureMenus.php" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Menu del dia</a>
-                    <a href="#" class="btn btn-willy btn-lg" >
+                    <a href="formContactoFam.php" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Contacte</a>
-                    <a href="#" class="btn btn-willy btn-lg" >
+                    <a href="suro.php" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Suro</a>
                 </div>
             </div>

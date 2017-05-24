@@ -133,6 +133,22 @@ video {
 	color: white;
 }
 
+/*-------pizarra-------*/
+@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+
+.pizarra {
+    background: url(../img/chalkboard.png);
+    /*width:100%;*/
+    font-family: 'Gloria Hallelujah';
+   font-size: 1.5em;
+    color:rgba(255,255,255,0.7);
+    text-shadow:0 0 4px rgba(255,255,255,0.6);
+    height:auto;
+    padding:50px;
+    border-radius: 30px;
+}
+
+
 /*----------------*/
 /* Google Map */
 #map{

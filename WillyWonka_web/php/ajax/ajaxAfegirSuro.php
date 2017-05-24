@@ -1,7 +1,18 @@
 <!-- Sí, se puede hacer ajax solo con html xD -->
 <br><br>
 <form action='procs/afegirSuro.proc.php'>
-	Títol: <input type='text' name='sur_titol'><br>
-	Text: <br><textarea name="sur_text" style="min-width: 300px;min-height: 100px;"></textarea><br>
-	<input type="submit" name="enviar" value="Enviar!">
+	<div class="form-group">
+	<label >Títol:</label><br>
+	<input type='text' class="form-control" name='sur_titol'>
+	</div>
+	<div class="form-group">
+	<label>Text</label><br>
+	<textarea name="sur_text" class="form-control" "></textarea>
+	</div>
+	<div class="form-group">
+	<input type="submit" name="enviar" class="btn btn-willy text-center btn-lg" value="Enviar!">
+	</div>
 </form><br>
+
+
+<!-- style="min-width: 300px;min-height: 100px; -->

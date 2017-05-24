@@ -49,7 +49,7 @@
                     <img src="../img/001-chocolate.png"></img>Classe</a>
                     <a href="afegirActivitat.php" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Activitats</a>
-                    <a href="#" class="btn btn-willy btn-lg" >
+                    <a href="modificarStock.php" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Stock</a>
                     <a href="contacteMestre.php" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Contacte</a>

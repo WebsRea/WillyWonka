@@ -1,6 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="cat">
 <head>
+    <?php
+        session_start();
+        
+        include "conexio.php";
+
+        $sql = "SELECT * FROM tbl_usuari WHERE usu_id = " . $_SESSION['usu_id'];
+        $resultat=mysqli_query($conexio, $sql);
+                    // echo "foisndfuignfdiuog";
+        if (mysqli_num_rows($resultat) != 0 ) {
+            while ($usuari = mysqli_fetch_array($resultat)) {
+                $_SESSION['usu_id'] = $usuari['usu_id'];
+                $_SESSION['usu_tipus'] = $usuari['usu_tipus'];
+                if ($_SESSION['usu_id'] == $usuari['usu_id'] AND $usuari['usu_tipus'] == 'admin') {
+                    //echo "Hola, " . $_SESSION['usu_nom'] . " ets un/a " . $_SESSION['usu_tipus'] . ".<br>";
+                }
+                //echo "<a href='gestioPerfils.php'>Gestionar Perfils</a>";
+            }
+        } else {
+            header('location:../../index.php?err=1');
+        }                      
+    ?>
+    <?php
+        include "includes_admin/head.php";
+
+    ?>
+
 	<title>Suro</title>
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script type="text/javascript">
@@ -44,30 +70,71 @@
 	</script>
 </head>
 <body>
-<h2>Suro</h2>
-<a href="#" onclick="afegirSuro()">Afegir una entrada</a>
-<div id="afegirSuro"></div>
-<?php 
+	<!-- Empezamos con el nav -->
+    <nav class="navbar navbar-fixed-top navegador"  role="navigation">
+        <div class="container">
+            <!-- Creamos el header del menu -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1" >
+                    <span class="sr-only">Alternar menu</span>
+                    <img src="../img/001-chocolate.png"></img>               
+                </button>
+                <a href="index_tutor.php"><img class="img-responsive" src="../img/LogoWW_SD.png" alt=""></a>
+            </div>
+            <!-- Links del menu -->
+            <div class="collapse navbar-collapse align-right" id="navbar1">
+                 <div class="nav navbar-nav botonesnav">
+                    <a href="index_tutor.php" class="btn btn-willy btn-lg">
+                    <img src="../img/001-chocolate.png"></img>Perfils </a>
+                    <a href="veureActivitats.php" class="btn btn-willy btn-lg">
+                    <img src="../img/001-chocolate.png"></img>Activitats</a>
+                    <a href="veureMenus.php" class="btn btn-willy btn-lg">
+                    <img src="../img/001-chocolate.png"></img>Menu del dia</a>
+                    <a href="formContactoFam.php" class="btn btn-willy btn-lg" >
+                    <img src="../img/001-chocolate.png"></img> Contacte</a>
+                    <a href="suro.php" class="btn btn-willy btn-lg" >
+                    <img src="../img/001-chocolate.png"></img> Suro</a>
+                </div>
+            </div>
+            <div class="container">
+                <h4 class="h4inicio">
+                <div class="row">
+                <?php 
+                echo "Sigues benvingut, " . $_SESSION['usu_nom'] . " et quedes amb mi o prefereixes  <a href='../index.php'><i class='fa fa-power-off' aria-hidden='true'> Sortir</i></a> ?<br>";
+                ?>
+                </div>
+                </h4>
+            </div>
 
-include "conexio.php";
-$sql = "SELECT * FROM `tbl_suro` ORDER BY sur_data DESC";
-$resultat = mysqli_query($conexio, $sql);
-			if (mysqli_num_rows($resultat) != 0 ) {
-				while ($suro = mysqli_fetch_array($resultat)) {
-					echo "<b>" . $suro['sur_titol'] . "</b> Data: ".$suro['sur_data']."<br>";
-					$idPare = $suro['usu_id'];
-					$sqlPare = "SELECT * FROM `tbl_usuari` where usu_id = $idPare";
-					$resultatPare = mysqli_query($conexio, $sqlPare);
-					if (mysqli_num_rows($resultatPare) != 0 ) {
-						while ($pare = mysqli_fetch_array($resultatPare)) {
-							echo "Autor: " . $pare['usu_nom'] . " ". $pare['usu_cognoms'] . "<br>"; 
-						}
-					}
-					echo $suro['sur_text'] . "<br><br>";
-				}
-			}else{echo "Encara no ha escrit ningú, sigues el primer!";}
+        </div>
+    </nav>
+    <!-- /.nav -->
+    <div class="jumbotron frase">
+    <h2 class="h2fam">SURO DE LES FAMILIES<br><small class="peque">Pots afegir informació que vulguis compartir amb les altres families.</small></h2></div>
+    <div class="container psom">
+    	<div class="col-md-3"></div>
+    	<div class="col-md-6">
+    			<p class="suro">RECORDA: aquest mur és vostre! Podeu compartir activitats que coneixeu fora de la llar o sortides que volgueu proposar de cap de setmana, o anunciar material que teniu de la canalla. Però en Willy Wonka us demana que sigueu responsables del que pinteu al mur. Gràcies!</p>
+				<a href="#" class="h2admin" onclick="afegirSuro()">Afegir una entrada</a>
+				<div id="afegirSuro"> 
+				<!-- Aquí carrega l'ajax -->
 
- ?>
+				</div>
+		</div>	
+		</div>
+	</div>
 
+	<div class="container pizarra">
+			<?php
+  			include "suro2.php";
+ 			 ?>
+ 			 
+	</div>
+<br><br>
 </body>
+<footer class="footer">
+  <?php
+  include "includes_admin/footer.php";
+  ?>
+</footer>
 </html>
