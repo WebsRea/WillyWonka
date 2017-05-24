@@ -85,7 +85,7 @@
     </div>
 
     <div class="container psom">
-        <p> <?php include "veureActivitats.php";?></p> 
+        <p> <?php include "veureActivitats1.php";?></p> 
 
     </div>
     <div class="jumbotron frase">
