@@ -18,7 +18,7 @@
 									echo $suro['sur_text'] . "<br><br>";
 									echo "</div>";
 								}
-							}else{echo "Encara no ha escrit ningú, sigues el primer! <img src='../img/icon/satisfied.png'><br><br><br><br><br>";}
+							}else{echo "BENVINGUTS!<br>Encara no ha escrit ningú, sigues el primer! <img src='../img/icon/satisfied.png'><br><br><br><br><br>";}
 
 				 ?>
 		

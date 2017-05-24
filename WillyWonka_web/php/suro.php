@@ -110,11 +110,10 @@
     </nav>
     <!-- /.nav -->
     <div class="jumbotron frase">
-    <h2 class="h2fam">SURO DE LES FAMILIES<br><small class="peque">Pots afegir informació que vulguis compartir amb les altres families.</small></h2></div>
+    <h2 class="h2fam">SURO DE LES FAMILIES<small class="peque"> RECORDA: aquest mur és vostre! <br>Podeu compartir activitats que coneixeu fora de la llar o sortides que volgueu proposar de cap de setmana, o anunciar material que teniu de la canalla. Però en Willy Wonka us demana que sigueu responsables del que pinteu al mur. Gràcies!</small></h2></div>
     <div class="container psom">
     	<div class="col-md-3"></div>
     	<div class="col-md-6">
-    			<p class="suro">RECORDA: aquest mur és vostre! Podeu compartir activitats que coneixeu fora de la llar o sortides que volgueu proposar de cap de setmana, o anunciar material que teniu de la canalla. Però en Willy Wonka us demana que sigueu responsables del que pinteu al mur. Gràcies!</p>
 				<a href="#" class="h2admin" onclick="afegirSuro()">Afegir una entrada</a>
 				<div id="afegirSuro"> 
 				<!-- Aquí carrega l'ajax -->
