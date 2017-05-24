@@ -142,7 +142,7 @@
     <!-- /.nav -->
 
 <div class="jumbotron frase">
-	<h2 class="h2fam">FITXA DELS INFANTS</h2>
+	<h2 class="h2fam">FITXA DELS INFANTS <br><small class="peque">Aquí pots veure la fitxa dels nens de la teva classe <br><small class="peque">o clica veure tots els nens si estàs fent substitucions</small></small></h2>
 </div>
 <div class="container psom">
 		Buscar:<br>

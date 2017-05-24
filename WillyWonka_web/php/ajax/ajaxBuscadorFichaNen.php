@@ -11,6 +11,6 @@ if (mysqli_num_rows($resultat) != 0 ) {
 	}
 	echo "</table>";
 }else{
-	echo "No hi han dades :'(";
+	echo "<img src='../img/icon/001-sad.png'> No hi han dades disponibles";
 }
  ?>

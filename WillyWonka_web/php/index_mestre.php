@@ -82,7 +82,15 @@
     <div class="jumbotron frase">
 
       
-        
+    </div>
+
+    <div class="container psom">
+        <p> <?php include "veureActivitats.php";?></p> 
+
+    </div>
+    <div class="jumbotron frase">
+
+      
     </div>
 
     <div class="container">

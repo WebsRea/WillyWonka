@@ -97,7 +97,14 @@
 				</form>
     		</div>
     </div>
-  
+  <br>
+  <br>
 	
 </body>
+<footer class="footer">
+
+  <?php
+  include "includes_admin/footer.php";
+  ?>
+</footer>
 </html>
