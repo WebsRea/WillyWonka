@@ -18,7 +18,7 @@
 		while ($nen = mysqli_fetch_array($resultat)) {
 			$nom = $nen['nen_nom']." ".$nen['nen_cognoms'];
 			$nen_id = $nen['nen_id'];
-			echo "<h2 class='h2admin'>$nom</h2><br>";
+			echo "<div class='container'><h2 class='h2admin'>$nom</h2><br>";
 			$sqlStock = "SELECT * FROM tbl_stock INNER JOIN tbl_stock_nen ON `tbl_stock_nen`.`sto_id` = `tbl_stock`.`sto_id` WHERE nen_id = $nen_id";
 			$resultatStock = mysqli_query($conexio, $sqlStock);
 			if (mysqli_num_rows($resultatStock) != 0 ) {
@@ -60,7 +60,9 @@
 
 					echo "<div class='col-md-3'><img src='../img/estoc/".$nenSto['sto_foto']."'> <br><p class='datos_tabla'>".$nenSto['sto_nom']."</p><i>".$radioStocks."</i><br></div>";
 				}
+				echo "</div>";
 			}
+
 		}
 			echo "<div id='oculto'>";
 	}else{
