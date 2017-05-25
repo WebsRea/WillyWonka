@@ -45,7 +45,7 @@
 							break;
 
 						case 'escola':
-							$radioStocks = "
+							$radioStocks = " 
 								<input type='radio' name='$stonen_id' value='ple' onclick='modStock(".$stonen_id.",\"ple\")'> ple<br>
 								<input type='radio' name='$stonen_id' value='alerta' onclick='modStock(".$stonen_id.",\"alerta\")'> alerta<br>
 								<input type='radio' name='$stonen_id' value='escola' onclick='modStock(".$stonen_id.",\"escola\")' checked> escola<br> 
@@ -58,7 +58,7 @@
 					}
 
 
-					echo "<div class='col-md-3'>".$nenSto['sto_nom']."<br>".$radioStocks."<br></div>";
+					echo "<div class='col-md-3'><img src='../img/estoc/".$nenSto['sto_foto']."'> <br><p class='datos_tabla'>".$nenSto['sto_nom']."</p><i>".$radioStocks."</i><br></div>";
 				}
 			}
 		}
