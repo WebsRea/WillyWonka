@@ -53,7 +53,7 @@ switch ($decisio) {
 				<input type='text' name='nen_malalties' placeholder='Malalties'>
 				</div>
 				<div class='col-md-12 margen_arriba'>
-				<input type='submit' name='ENVIAR' value='ENVIAR' class='btn btn-willy text-center'>
+				<input type='submit' name='ENVIAR' value='ENVIAR' class='btn btn-willy text-center btn-lg'>
 				</div>
 				<div class='col-md-12 margen_arriba'></div>
 			</form>
@@ -73,7 +73,7 @@ switch ($decisio) {
 					<input type='text' name='usu_mail' placeholder='Correu'>
 					<input type='password' name='usu_pass' placeholder='Contrasenya'>
 					<div class='col-md-12 margen_arriba'>
-					<input type='submit' name='ENVIAR' class='btn btn-willy text-center'>
+					<input type='submit' name='ENVIAR' class='btn btn-willy text-center btn-lg'>
 					</div>
 				</form>
 			<div class='col-md-12 margen_arriba'></div>
@@ -94,7 +94,7 @@ switch ($decisio) {
 					<input type='text' name='usu_mail' placeholder='Correu'>
 					<input type='password' name='usu_pass' placeholder='Contrasenya' >
 					<div class='col-md-12 margen_arriba'>
-					<input type='submit' name='ENVIAR' class='btn btn-willy text-center'>
+					<input type='submit' name='ENVIAR' class='btn btn-willy text-center btn-lg'>
 					</div>
 				</form>
 			<div class='col-md-12 margen_arriba'></div>

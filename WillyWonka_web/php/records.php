@@ -51,7 +51,7 @@
                     <img src="../img/001-chocolate.png"></img> Stock</a>
                     <a href="contacteMestre.php" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Contacte</a>
-                    <a href="records.php" class="btn btn-willy btn-lg">
+                    <a href="#" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Records</a>
 
                 </div>
@@ -69,32 +69,47 @@
         </div>
     </nav>
     <!-- /.nav -->
-   
-    <div class="jumbotron frase">
-
-        <p> <?php include "veureFrase.php";?></p>
-        
-    </div>
-    <div class="container psom">
-        <h2 class="h2admin"><img src="../img/icon/002-megaphone.png"> PROPERS ESDEVENIMENTS <img src="../img/icon/002-megaphone.png"></h2>
-          <p> <?php include "mostrarEsdeveniment.php";?></p>
-
-    </div>
 
     <div class="jumbotron frase">
 
-      
-    </div>
+        <div class="main">
+            <h2 class="h2fam">ELS TEUS RECORDS</h2>
+            <div class="slides">
+                <img src="../img/colors_hand.jpg" alt="">
+                <img src="../img/chalk_hands.jpg" alt="">
+                <img src="../img/casa_chocolate.jpg" alt="">
+            </div>
+        </div>
 
-    <div class="container psom">
-        <h2 class="h2admin"><img src="../img/icon/003-garlands.png"> PROPERES ACTIVITATS <img src="../img/icon/003-garlands.png"></h2>
-        <p > <?php include "veureActivitats1.php";?></p> 
-
     </div>
-    <div class="jumbotron frase">
-
-      
-    </div>
+    <!-- javascript sobre todo para el slider -->
+    <script src="js/jquery.min.js"></script>     
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="../js/jquery.slides.js"></script>
+    <script >
+        $(function(){
+          $(".slides").slidesjs({
+            play: {
+              active: true,
+                // [boolean] Generate the play and stop buttons.
+                // You cannot use your own buttons. Sorry.
+              effect: "slide",
+                // [string] Can be either "slide" or "fade".
+              interval: 3000,
+                // [number] Time spent on each slide in milliseconds.
+              auto: true,
+                // [boolean] Start playing the slideshow on load.
+              swap: true,
+                // [boolean] show/hide stop and play buttons
+              pauseOnHover: false,
+                // [boolean] pause a playing slideshow on hover
+              restartDelay: 2500
+                // [number] restart delay on inactive slideshow
+            }
+          });
+        });
+    </script>
 </body>
 <footer class="footer">
   <?php

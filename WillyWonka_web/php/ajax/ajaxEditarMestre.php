@@ -26,7 +26,7 @@ $sql = "SELECT * FROM tbl_usuari WHERE usu_id = $id AND usu_tipus = 'mestre'";
 						<input type='text' name='mail' value='$mail' class='form-control'>
 						<a href='procs/resetPass.proc.php?id=$id'>Clica per resetejar la contrasenya (serà 123 fins que la canvíin)</a><br>
 						<input type='hidden' name='id' value='$id'><br>
-						<input type='submit' value='Modificar' class='btn btn-willy text-center'>
+						<input type='submit' value='Modificar' class='btn btn-willy text-center btn-lg'>
 					";
 				}
 				echo "</table>";

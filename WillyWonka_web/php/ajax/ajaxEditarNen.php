@@ -33,7 +33,7 @@ $sql = "SELECT * FROM tbl_nen WHERE nen_id = $id";
 								<label>Malalties</label>
 								<input type='text' name='malalties' value='$malalties' class='form-control'>
 								<input type='hidden' name='id' value='$id'> 
-								<input type='submit' value='Modificar' class='btn btn-willy text-center'>
+								<input type='submit' value='Modificar' class='btn btn-willy text-center btn-lg'>
 							</div>
 						</div> 
 					";

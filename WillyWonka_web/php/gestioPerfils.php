@@ -250,26 +250,32 @@
     		<div class="row">
     			<div class="col-md-6">
 	    			<h2>Quin usuari vols modificar?</h2>
+	    			<label>
 	    			<input type="radio" name="persona" id="nen" value="nen" onclick="seleccionarPersonaAccio()">
-		    		<label><img src="../img/icon/001-ciguena.png"> Nen</label>
+		    		<img src="../img/icon/001-ciguena.png"> Nen</label>
 					<br>
+					<label>
 					<input type="radio" name="persona" id="tutor" value="tutor" onclick="seleccionarPersonaAccio()">
-					<label><img src="../img/icon/002-construccion.png"> Familiar </label>
+					<img src="../img/icon/002-construccion.png"> Familiar </label>
 					<br>
+					<label>
 					<input type="radio" name="persona" id="mestre" value="mestre" onclick="seleccionarPersonaAccio()">
-					<label><img src="../img/icon/001-educacion.png"> Mestre </label>
+					<img src="../img/icon/001-educacion.png"> Mestre </label>
 				</div>
 		
 				<div class="col-md-6">
 					<h2>Qué vols fer amb ell?</h2>
+					<label>
 					<input type="radio" name="accio" id="afegir" value="afegir" onclick="seleccionarPersonaAccio()">
-					<label><img src="../img/icon/006-usuario.png">Afegir</label>
+					<img src="../img/icon/006-usuario.png">Afegir</label>
 					<br>
+					<label>
 					<input type="radio" name="accio" id="editar" value="editar" onclick="seleccionarPersonaAccio()">
-					<label><img src="../img/icon/008-lapiz.png">Editar</label>
+					<img src="../img/icon/008-lapiz.png">Editar</label>
 					<br>
+					<label>
 					<input type="radio" name="accio" id="eliminar" value="eliminar" onclick="seleccionarPersonaAccio()">
-					<label><img src="../img/icon/003-usuario-1.png">Eliminar</label>
+					<img src="../img/icon/003-usuario-1.png">Eliminar</label>
 					
 				</div>
 			</div>

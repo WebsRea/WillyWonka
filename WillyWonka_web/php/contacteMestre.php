@@ -45,16 +45,16 @@
             <!-- Links del menu -->
             <div class="collapse navbar-collapse align-right" id="navbar1">
                  <div class="nav navbar-nav botonesnav">
-                    <a href="" class="btn btn-willy btn-lg">
+                    <a href="veureFichesNens.php" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Perfils </a>
-                    <a href="" class="btn btn-willy btn-lg">
-                    <img src="../img/001-chocolate.png"></img>Classes</a>
-                    <a href="" class="btn btn-willy btn-lg">
+                    <a href="afegirActivitat.php" class="btn btn-willy btn-lg">
                     <img src="../img/001-chocolate.png"></img>Activitats</a>
-                    <a href="" class="btn btn-willy btn-lg" >
+                    <a href="modificarStock.php" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Stock</a>
-                    <a href="" class="btn btn-willy btn-lg" >
+                    <a href="contacteMestre.php" class="btn btn-willy btn-lg" >
                     <img src="../img/001-chocolate.png"></img> Contacte</a>
+                    <a href="records.php" class="btn btn-willy btn-lg">
+                    <img src="../img/001-chocolate.png"></img>Records</a>
                 </div>
             </div>
             <div class="container">

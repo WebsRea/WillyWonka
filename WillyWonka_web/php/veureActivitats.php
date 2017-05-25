@@ -96,10 +96,10 @@
 					$resultsB=mysqli_query($conexio,$sqlB);
 					if ($row = mysqli_fetch_array($resultsB)){ 
 
-					   echo "<table border = '1'> \n"; 
-					   echo "<tr><td>Titol</td><td>Descripció</td><td>Data Inicial</td><td>Data Final</td></tr> \n"; 
+					   echo "<table class=' table table-hover' \n"; 
+					   echo "<tr class='datos_tabla'><td>Titol</td><td>Descripció</td><td>Data Inicial</td><td>Data Final</td></tr> \n"; 
 					   do { 
-					      echo "<tr><td>".$row["act_titol"]."</td><td>".$row["act_text"]."</td><td>".$row["act_data_ini"]."</td><td>".$row["act_data_fi"]."</td></tr> \n"; 
+					      echo "<tr class='datos_tabla'><td>".$row["act_titol"]."</td><td>".$row["act_text"]."</td><td>".$row["act_data_ini"]."</td><td>".$row["act_data_fi"]."</td></tr> \n"; 
 					   } while ($row = mysqli_fetch_array($results)); 
 					   echo "</table> \n"; 
 					} else { 
@@ -140,10 +140,10 @@
 							$results=mysqli_query($conexio,$sql);
 							if ($row = mysqli_fetch_array($results)){ 
 
-							   echo "<table border = '1'> \n"; 
-							   echo "<tr><td>Titol</td><td>Descripció</td><td>Data Inicial</td><td>Data Final</td></tr> \n"; 
+							   echo "<table class=' table table-hover'> \n"; 
+							   echo "<tr class='datos_tabla'><td>Titol</td><td>Descripció</td><td>Data Inicial</td><td>Data Final</td></tr> \n"; 
 							   do { 
-							      echo "<tr><td>".$row["act_titol"]."</td><td>".$row["act_text"]."</td><td>".$row["act_data_ini"]."</td><td>".$row["act_data_fi"]."</td></tr> \n"; 
+							      echo "<tr class='datos_tabla'><td>".$row["act_titol"]."</td><td>".$row["act_text"]."</td><td>".$row["act_data_ini"]."</td><td>".$row["act_data_fi"]."</td></tr> \n"; 
 							   } while ($row = mysqli_fetch_array($results)); 
 							   echo "</table> \n"; 
 							} else { 

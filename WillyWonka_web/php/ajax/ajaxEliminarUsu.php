@@ -14,7 +14,7 @@ include('../conexio.php');
 				echo "
 						<form action='procs/eliminarUsu.proc.php'>
 						<input type='hidden' name='id' value='$id'>
-						<input type='submit' value='Eliminar' class='btn btn-willy'>
+						<input type='submit' value='Eliminar' class='btn btn-willy btn-lg'>
 						</form>
 						<br>
 					";
