@@ -89,7 +89,7 @@
     <div class="container psom">
         <h2 class="h2admin"><img src="../img/icon/003-garlands.png"> PROPERES ACTIVITATS <img src="../img/icon/003-garlands.png"></h2>
         <p > <?php include "veureActivitats1.php";?></p> 
-
+        
     </div>
     <div class="jumbotron frase">
 

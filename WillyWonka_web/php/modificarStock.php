@@ -143,7 +143,7 @@ function modStock(stonen_id,quantitat){
     </nav>
     <!-- /.nav -->
    	<div class="jumbotron frase">
-   		<h2 class="h2fam">CONTROLA L'ESTOC</h2>
+   		<h2 class="h2fam">CONTROLA L'ESTOC <br><small class="peque">RECORDA: Quan indiquis <i>alerta</i> s'enviarà un email al familiar per recordar-li que ha de portar més material. <br>Si indiques <i>escola</i> vol dir que ja estàs utilitzant els recursos de la llar i s'enviarà un mail als familiars.</small></h2>
 
    	</div>
    	<div class="container psom">

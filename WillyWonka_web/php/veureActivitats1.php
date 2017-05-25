@@ -15,17 +15,26 @@
 			while ($usu = mysqli_fetch_array($results)) {
 				$cla_id = $usu['cla_id'];
 				if (isset($cla_id)) {
-				$sqlB="SELECT * FROM tbl_activitats WHERE now() BETWEEN act_data_ini AND act_data_fi OR act_data_ini <= NOW() + INTERVAL 1 WEEK AND act_data_fi >= NOW() + INTERVAL 1 WEEK AND cla_id = $cla_id ORDER BY act_data_ini DESC"; 
+				// $sqlB="SELECT * FROM tbl_activitats WHERE now() BETWEEN act_data_ini AND act_data_fi OR act_data_ini <= NOW() + INTERVAL 1 WEEK AND act_data_fi >= NOW() + INTERVAL 1 WEEK AND cla_id = $cla_id ORDER BY act_data_ini DESC"; 
+				$sqlB="SELECT * 
+FROM tbl_activitats 
+WHERE (now() BETWEEN act_data_ini AND act_data_fi) 
+OR (act_data_ini <= (NOW() + INTERVAL 1 WEEK) AND act_data_fi >= (NOW() + INTERVAL 1 WEEK)) 
+AND (cla_id = $cla_id)
+ORDER BY act_data_ini DESC"; 
+				
 					// $sql="SELECT * FROM tbl_activitats WHERE now() BETWEEN act_data_ini AND act_data_fi OR act_data_ini <= (NOW() + INTERVAL 1 WEEK) AND act_data_fi >= (NOW() + INTERVAL 1 WEEK) AND cla_id = 1 ORDER BY act_data_ini DESC"; 
 					
 					$resultsB=mysqli_query($conexio,$sqlB);
-					if ($row = mysqli_fetch_array($resultsB)){ 
+					//$fila_y= mysqli_num_rows($resultsB);
+					//echo $fila_y;
+					if ( mysqli_num_rows($resultsB) != 0){ 
 
 					   echo "<table class=' table table-hover'> \n"; 
 					   echo "<tr class='datos_tabla'><td>Titol</td><td>Descripció</td><td>Data Inicial</td><td>Data Final</td></tr> \n"; 
-					   do { 
-					      echo "<tr '><td>".$row["act_titol"]."</td><td>".$row["act_text"]."</td><td>".$row["act_data_ini"]."</td><td>".$row["act_data_fi"]."</td></tr> \n"; 
-					   } while ($row = mysqli_fetch_array($results)); 
+					   while ($row = mysqli_fetch_array($resultsB)) {
+					    	echo "<tr ><td>".$row["act_titol"]."</td><td>".$row["act_text"]."</td><td>".$row["act_data_ini"]."</td><td>".$row["act_data_fi"]."</td></tr> \n"; 
+					    } 
 					   echo "</table> \n"; 
 					} else { 
 					echo "<img src='../img/icon/001-sad.png'> No hi ha cap registre!"; 
@@ -59,6 +68,8 @@
 						$nom = $nen2['nen_nom'];
 						echo "Activitats de: $nom";
 						$cla_id = $nen2['cla_id'];
+						
+						// $sql="SELECT * FROM tbl_activitats WHERE now() BETWEEN act_data_ini AND act_data_fi OR act_data_ini <= NOW() + INTERVAL 1 WEEK AND act_data_fi >= NOW() + INTERVAL 1 WEEK AND cla_id = $cla_id ORDER BY act_data_ini DESC"; 
 						$sql="SELECT * FROM tbl_activitats WHERE now() BETWEEN act_data_ini AND act_data_fi OR act_data_ini <= NOW() + INTERVAL 1 WEEK AND act_data_fi >= NOW() + INTERVAL 1 WEEK ORDER BY act_data_ini DESC"; 
 							// $sql="SELECT * FROM tbl_activitats WHERE now() BETWEEN act_data_ini AND act_data_fi OR act_data_ini <= (NOW() + INTERVAL 1 WEEK) AND act_data_fi >= (NOW() + INTERVAL 1 WEEK) AND cla_id = 1 ORDER BY act_data_ini DESC"; 
 							
