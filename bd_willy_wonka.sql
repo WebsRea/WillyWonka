@@ -128,7 +128,8 @@ CREATE TABLE `tbl_observacions` (
 
 CREATE TABLE `tbl_stock` (
   `sto_id` int(11) NOT NULL,
-  `sto_nom` varchar(50) NOT NULL
+  `sto_nom` varchar(50) NOT NULL,
+  `sto_foto` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -392,8 +393,8 @@ INSERT INTO `tbl_usuari` (`usu_id`, `usu_nom`, `usu_cognoms`, `usu_mail`, `usu_p
 --
 -- Volcado de datos para la tabla `tbl_stock`
 --
-INSERT INTO `tbl_stock` (`sto_id`, `sto_nom`) 
-  VALUES (NULL, 'Bolquers'), (NULL, 'Tovalloletes'), (NULL, 'Crema'), (NULL, 'Mudes'), (NULL, 'Pitets'), (NULL, 'Xumets');
+INSERT INTO `tbl_stock` (`sto_id`, `sto_nom`, `sto_foto`) 
+  VALUES (NULL, 'Bolquers', '002-baby-1.png'), (NULL, 'Tovalloletes', '004-paper.png'), (NULL, 'Crema', '001-beauty.png'), (NULL, 'Mudes', '015-fashion-1.png'), (NULL, 'Pitets', '018-fashion.png'), (NULL, 'Xumets', '020-tool.png');
 -- Índices para tablas volcadas
 --
 

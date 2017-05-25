@@ -146,8 +146,8 @@ function modStock(stonen_id,quantitat){
    		<h2 class="h2fam">CONTROLA L'ESTOC</h2>
 
    	</div>
-   	<div class="container">
-   	<div id="stockNens"></div>
+   	<div class="container psom">
+   		<div id="stockNens"></div>
    	</div>
 
 </body>

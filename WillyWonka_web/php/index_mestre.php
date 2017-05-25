@@ -76,7 +76,7 @@
         
     </div>
     <div class="container psom">
-        <h2 class="h2admin"><img src="../img/icon/002-megaphone.png"> PROPERS ESDEVENIMENTS <img src="../img/icon/002-megaphone.png"></h2>
+        <h2 class="h2admin"><img src="../img/icon/002-megaphone.png"> PROPERS ESDEVENIMENTS <img src="../img/icon/002-megaphone.png"><br><small>Recorda que nomès l'administrador pot eliminar esdeveniments</small></h2>
           <p> <?php include "mostrarEsdeveniment.php";?></p>
 
     </div>

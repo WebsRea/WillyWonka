@@ -69,7 +69,7 @@ $sql = "UPDATE `tbl_stock_nen` SET `stonen_quantitat` = '$quantitat' WHERE `tbl_
 
 
 
-	echo "O SALES O MATO A ALGUIEN";
+	//echo "O SALES O MATO A ALGUIEN";
 	
 
 
