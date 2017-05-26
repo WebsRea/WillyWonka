@@ -47,7 +47,7 @@ CREATE TABLE `tbl_classe` (
   `cla_id` int(11) NOT NULL,
   `cla_nom` varchar(100) NOT NULL,
   `cla_curs` int(1) NOT NULL,
-  `cla_foto` varchar(20) NULL
+  `cla_foto` varchar(200) NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -186,6 +186,17 @@ CREATE TABLE `tbl_frase` (
 `frase_data` date NOT NULL,
 `usu_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+--
+-- Estructura de tabla para la tabla `tbl_usuari`
+--
+CREATE TABLE `tbl_img_cla` (
+`imgCla_id` int(11) NOT NULL,
+`imgCla_ruta` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 
 
 
@@ -400,7 +411,7 @@ INSERT INTO `tbl_stock` (`sto_id`, `sto_nom`, `sto_foto`)
 
 INSERT INTO `tbl_esdeveniments` (`esd_titol`, `esd_data_ini`, `esd_data_fin`, `esd_text`, `usu_id`) VALUES ('Dia del xocolata', '2017-10-02', '2017-10-06', 'Aquests dies celebrem el dia de la xocolata.', '1'), ('Castanyera', '2017-10-30', '2017-11-03', 'Celebrem la castanyada a la nostra llar.', '1'), ('Dia Steve Irwin', '2017-11-27', '2017-12-01', 'La seva preocupació pels animals ens inspira aquesta setmana.', '1'), ('Nadal', '2017-12-11', '2017-12-15', 'Celebrem el Nadal a la Llar.', '1'), ('Winter Light Festival', '2018-01-15', '2018-01-19', 'Aquesta setmana omplim de llum la llar.', '1'), ('Carnestoltes', '2018-02-05', '2018-02-09', 'Carnestoltes a la LLar.', '1'), ('Holi Festiva Jr', '2018-03-19', '2018-03-23', 'Ens agraden els colors!.', '1'), ('Sant Jordi', '2018-04-16', '2018-04-20', 'Llibre i roses, històries i contes.', '1'), ('Cultures del món', '2018-05-21', '2018-05-25', 'Celebrem la setmana de les cultures.', '1'), ('Festa de estiu' , '2018-06-18', '2018-06-21', 'Celebracions per donar la benvinguda a aquesta estació.', '1');
 
-
+INSERT INTO `tbl_img_cla` (`imgCla_id`, `imgCla_ruta`) VALUES (NULL, 'bombons.png'), (NULL, 'bracets.png'), (NULL, 'chocolata.png'), (NULL, 'cireres.png'), (NULL, 'cupcake.png'), (NULL, 'merengue.png'), (NULL, 'nutella.png'), (NULL, 'ous.png'), (NULL, 'pastis.png'), (NULL, 'pometes.png');
 
 
 

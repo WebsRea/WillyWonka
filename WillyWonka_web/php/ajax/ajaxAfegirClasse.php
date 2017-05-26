@@ -1,4 +1,5 @@
 <?php 
+include('../conexio.php');
 echo ' 
 		<div class="row">
 			<div class="form-group">
@@ -18,11 +19,38 @@ echo '
 							
 							<label class="psom">Franja: </label> <input type="number" name="cla_curs" min="0" max="3"><br>
 
-							<label class="psom">Foto per la classe:</label> <input type="text" name="cla_foto" disabled placeholder="deshabilitat"><br>
+							<label class="psom">Foto per la classe:</label>
+							';
+							$sql="SELECT * FROM tbl_img_cla";
+								
+							$results=mysqli_query($conexio,$sql);
+							if (mysqli_num_rows($results) != 0){
+								while ($foto = mysqli_fetch_array($results)) {
+									$imgVer = "../img/pack/".$foto["imgCla_ruta"];
+									$img = $foto["imgCla_ruta"];
+									echo '
+									<input type="radio" name="cla_foto" value="'.$img.'" checked><img src="'.$imgVer.'">
+									';
+								}
+							}
+
+
+
+							echo '
+							<br>
 							<input type="submit" value="enviar" class="btn btn-willy text-center btn-lg">
 					
 			</div>	
 
 ';
+
+
+
+
+
+
+
+
+// ../img/pack/
  ?>
 	
