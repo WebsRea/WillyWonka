@@ -168,20 +168,25 @@
         </div>
         <div class="col-md-4"></div>
         <div class="col-md-4">
-            <form>
+            <form action="php/send.php" method="POST" name="contacto" id="contacto" novalidate>
                 <div class="form-group">
                     <label for="nominteresat">Nom</label>
-                    <input type="text" class="form-control" id="" placeholder="Nom">
+                    <input type="text" class="form-control" placeholder="Nom" name="name" id="name" required data-validation-required-message="Per favor, introdueixi el seu nom.">
+                                <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
                     <label for="mailinteresat">Correu de contacte</label>
-                    <input type="email" class="form-control" id="" placeholder="Correu">
+                    <input type="email" class="form-control" placeholder="Correu"  name="email" id="email" required data-validation-required-message="Si us plau, introdueixi la seva adreça electrònica.">
+                                <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
                     <label for="textinteresat">Missatge</label>
-                    <textarea type="text" class="form-control" id="" placeholder="El vostre Missatge"></textarea>
+                    <textarea type="text" class="form-control" id="" placeholder="El vostre Missatge" name="message" id="message" required data-validation-required-message="Per favor, introdueixi el seu missatge."></textarea>
+                                <p class="help-block text-danger"></p>
                 </div> 
                 <div class="col-md-3"></div> 
+                <br>
+                <div id="success"></div>
                 <div class="col-md-3">  
                 <button type="submit" class="btn btn-willy text-center">Enviar dades</button>
                 </div> 
@@ -191,7 +196,7 @@
     <br>
 
     <!-- fin formulario -->
-
+    
     <!-- google map -->
     <div id="map-btn1-div">
         <a id="map-btn1" class="gmap-btn close-map-button btn-show" href="#map">
