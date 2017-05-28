@@ -81,7 +81,7 @@
                 <div  class="col-md-12">
                     <div class="col-md-3"><img src="img/waiting.jpg" class="img-responsive imgsom"></div>
                     <div class="col-md-9">
-                    <p class="psom">Esteu a punt de rebre el regal més preuat i volem oferir-vos la millor llar d'infants que pogueu desitjar. Som un equip jove i la nostra llar d'infants, antiga fàbrica de xocolate té  amb una història increible.</p></div>
+                    <p class="psom">Esteu a punt de rebre el regal més preuat i volem oferir-vos la millor llar d'infants que pogueu desitjar. Som un equip jove i la nostra llar d'infants, antiga fàbrica de xocolate té una història increïble. Volem ser més que una llar per vosaltres. Volem ser un lloc acollidor, on els infants se sentin segurs i poguin descobrir i explorar l'entorn per aprendre coses noves cada dia. Us convidem a acompanyar-nos en aquest viatge tant maco, que es veure els vostres fills créixer. </p></div>
                 </div>
         </div>
     </div>
@@ -90,72 +90,49 @@
              <div class="col-md-12">
                 <div class="col-md-3">
                 <h2 class="h1som">Volem alt</h2>
-                <img src="img/fly_boy.jpg" class="img-responsive">
-                            <p class="psom">Lorem ipsum dolor sit amet, consectetur adipisicing elit
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <img src="img/fly_boy.jpg" class="img-responsive"><br>
+                            <p class="psom">Les nostres instal·lacions estan preparades per oferir als nostres infants moltes oportunitats per descobrir coses noves cada dia. Vine a descobrir el nostre hivernacle, ple de papallones, ocells i tants altres animals com la natura ens ofereix. .</p>
                 </div>
                 <div class="col-md-3">
                 <h2 class="h1som">En tenim cura</h2>
-                <img src="img/holding.jpg" class="img-responsive">
-                            <p class="psom">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <img src="img/holding.jpg" class="img-responsive"><br>
+                            <p class="psom">Especialistes en totes les etapes; ens assegurem de donar una bona atenció individualitzada, vigilant sempre de cobrir les necessitats de cada infant, adaptant-nos sempre que sigui necessari, sense oblidar la cohesió del grup. </p>
                 </div>
                 <div class="col-md-3">
                 <h2 class="h1som">Els més dolços</h2>
-                <img src="img/casa_chocolate.jpg" class="img-responsive">
-                            <p class="psom">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <img src="img/casa_chocolate.jpg" class="img-responsive"><br>
+                            <p class="psom">Volem que la etapa del vostre infant a la llar estigui plena de somnis, somriures i felicitat. Creiem que és una etapa molt important ja que amb totes les vivencies que acumularà seran les bases del futur individu.</p>
                 </div>
                 <div class="col-md-3">
                 <h2 class="h1som">Creixem junts</h2>
-                <img src="img/holding_toe.jpg" class="img-responsive">
-                            <p class="psom">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <img src="img/holding_toe.jpg" class="img-responsive"><br>
+                            <p class="psom">Creixem junts en un entorn bonic, tranquil, envoltat de natura. Vivint moments únics en aquest entorn especial. Serem guies, acompanyants, aprendrem junts respectant sempre el ritme de cada infant i els seus moments.</p>
                 </div>
             </div>
         </div>      
     </div>
     <div class="jumbotron frase" id="amiga" >
         <div class="container">
-            <h1 class="h1som">Aquí les col·laboracions</h1>
+            <h1 class="h1som">ESTIMEM LA NATURA </h1>
             <div class="col-md-9">
-            <p class="psom">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <br><br>
+            <p class="psom">No només som una llar, sino  també, ferms defensors del medi ambient. És per això que tenim tota una serie de entitats col·laboradores.</p>
+            <p class="psom"><i>Espai de Gats</i> ens permet fer activitats amb animals abandonats que necessiten molt d'amor i atenció ja que estan a l'espera d'una familia que els acolli. </p>
+            <p class="psom"><i>L'ajuntament de Vielha</i> ens proporciona tant soport a l'hora de realitzar diferents activitats, com també espais lliures pels diferents esfeveniments que organitzem a la llar. </p>
+            <p class="psom"><i>Greenpeace:</i> ens sentim molt orgullosos de poder dir-nos "Escola amiga de la Natura"; un certificat que adquireixen les escoles per part de Greenpeace al demostrar que es fa un ús de material renovable i provinents de fonts ecológiques. Hem firmat una declaració per la qual ens comprometem a no fer ús de material provinent de fonts que destrueixin els boscos primaris. Una de les coses que ens proporciona Greenpeace es una guia didàctica que ens ajuda a ensenyar als infants com tenir cura del medi ambient. </p>
+            <p class="psom"><i>La hípica Rossell</i> va veure néixer el nostre preciat poni Gregori. Ens va donar soport i ajuda a l'hora d'acollir i cuidar el nostre nou integrant. Amb en Gregori els infants descobriran, investigaran i observaran de ben aprop, com és cuidar d'un dels animals més bonics de la granja. </p>
                 
             </div>
             <div class="col-md-3">
                 <a href="http://espaidegats.com/es/" target="_blanck"><img src="img/col/EspaideGats.png" class="img-responsive"></a>
+               <!--  <br>
+                <a href="http://web.gencat.cat/ca/inici/" target="_blanck"><img src="img/col/gencat_cat1.png" class="img-responsive"></a> -->
+                
+                 <a href="http://www.vielha-mijaran.org/ar/" target="_blanck"><img src="img/col/vielha1.png" class="img-responsive"></a>
                 <br>
-                <a href="http://web.gencat.cat/ca/inici/" target="_blanck"><img src="img/col/gencat_cat1.png" class="img-responsive"></a>
-                <br>
-                <br>
+                <a href="http://www.greenpeace.org/espana/es/" target="_blanck"><img src="img/col/Greenpeace_logo.png" class="img-responsive"></a>
+                <br><br><br>
                 <a href="https://www.clubrural.com/turismo-activo/barcelona/vilassar-de-mar/hipica-rosell_29539" target="_blanck"><img src="img/col/hipica1.png" class="img-responsive"></a>
-                <br>
-                <a href="http://www.vielha-mijaran.org/ar/" target="_blanck"><img src="img/col/vielha1.png" class="img-responsive"></a>
-                <br>
-                <a href="http://www.greenpeace.org/international/en/" target="_blanck"><img src="img/col/Greenpeace_logo.png" class="img-responsive"></a>
                 <br>
             </div>
         </div>
