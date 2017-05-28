@@ -26,8 +26,8 @@ $sql = "SELECT * FROM tbl_nen WHERE nen_id = $id";
 								<input type='text' name='cognoms' value='$cognoms' class='form-control'>
 								<label>Data naixament</label>
 								<input type='date' name='data' value='$data' class='form-control'>
-								<label>Alergies</label>
-								<input type='text' name='alergies' value='$alergies' class='form-control'>
+								<label>Al·lèrgies</label>
+								<input type='text' name='al·lèrgies' value='$alergies' class='form-control'>
 								<label>Trastorns</label>
 								<input type='text' name='trastorns' value='$trastorns' class='form-control'>
 								<label>Malalties</label>
