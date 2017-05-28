@@ -48,7 +48,7 @@ switch ($decisio) {
 					<input type='date' name='nen_data'>
 				</div>
 				<div class='col-md-12 margen_arriba'>
-				<input type='text' name='nen_alergies' placeholder='Alergies'>
+				<input type='text' name='nen_alergies' placeholder='Al·lèrgies'>
 				<input type='text' name='nen_trastorns' placeholder='Trastorns'>
 				<input type='text' name='nen_malalties' placeholder='Malalties'>
 				</div>
